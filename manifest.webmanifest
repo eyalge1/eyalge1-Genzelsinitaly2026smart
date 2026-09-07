@@ -1,7 +1,7 @@
 {
   "name": "Genzelsinitaly2026smart",
-  "short_name": "Genzelsinitaly2026smart",
-  "description": "אפליקציית הטיול המשפחתית החכמה לאיטליה 2026 – עם לשונית היום",
+  "short_name": "Italy Smart",
+  "description": "האפליקציה החכמה לטיול המשפחתי באיטליה 2026",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

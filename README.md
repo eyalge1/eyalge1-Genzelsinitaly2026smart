@@ -1,16 +1,26 @@
 # Genzelsinitaly2026smart
 
-GitHub Pages package for the separate SMART trip app.
+גרסה עצמאית ונפרדת מ-`eyalge1/Genzelsinitaly2026`.
 
-## Upload
-Upload the **contents** of this folder to the root of `eyalge1/eyalge1-Genzelsinitaly2026smart` on branch `main`.
-Keep the `icons/` directory as a directory.
+## העלאה ל-GitHub
+יש להעלות את כל תוכן התיקייה לשורש repository:
+`eyalge1/eyalge1-Genzelsinitaly2026smart`
 
-GitHub Pages: Settings → Pages → Deploy from branch → `main` → `/(root)`.
+מבנה נדרש:
+- index.html
+- manifest.webmanifest
+- service-worker.js
+- .nojekyll
+- README.md
+- VERSION.txt
+- icons/
+  - icon-192.png
+  - icon-512.png
 
-## Included SMART behavior
-- `היום` tab opens by default.
-- Automatically selects trip day for 13/9/2026–28/9/2026.
-- Shows driving, walking, cost, load, gear, navigation, parking, food and day schedule.
-- From 16:00 during the trip, shows preparation for tomorrow, including bookings and parking.
-- Separate PWA/cache from the older `eyalge1/Genzelsinitaly2026` app.
+GitHub Pages:
+- Source: Deploy from a branch
+- Branch: main
+- Folder: /(root)
+
+קישור:
+https://eyalge1.github.io/eyalge1-Genzelsinitaly2026smart/

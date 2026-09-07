@@ -1,4 +1,4 @@
 Genzelsinitaly2026smart
 SMART v4 on v18 base
-Build v8-cachefix: GitHub Pages cache/service-worker fix
+Build v9: dynamic daily preflight checklist + cachefix retained
 2026-09-07

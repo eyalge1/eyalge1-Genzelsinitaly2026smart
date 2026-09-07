@@ -1510,7 +1510,129 @@ function renderTomorrow(now,day){
     </div>`;
   }
 
-  function renderToday(){
+  
+  const smartPreflight = {
+    1:[
+      'דרכונים, רישיון נהיגה ומסמכי השכרת הרכב בהישג יד',
+      'וודאו כתובת Hotel Europa וניווט ל-Desenzano',
+      'בדקו אם צריך עצירת קניות קצרה לפני המלון',
+      'מטענים/סוללות זמינים אחרי הטיסה'
+    ],
+    2:[
+      'כל המזוודות נסתרות בתא המטען לפני העצירה ב-Molveno',
+      'נווטו ל-Park Molveno – Ischia',
+      'נעלי הליכה קלות, מים ושכבה דקה לאגם',
+      'וודאו יעד הלינה Hatzeshof Heustadel, Laion לפני היציאה'
+    ],
+    3:[
+      'בדקו מזג אוויר וראות ב-Seceda לפני היציאה',
+      'בדקו פעילות ושעות Funivie Seceda',
+      'כרטיסי רכבל / הזמנה זמינים בטלפון',
+      'נעלי הליכה, שכבות, מים וקרם הגנה',
+      'נווטו ישירות לחניה/תחנת Funivie Seceda באורטיזיי'
+    ],
+    4:[
+      'בדקו מזג אוויר וראות ב-Alpe di Siusi',
+      'בדקו פעילות ושעות רכבל Seis–Compatsch',
+      'ודאו חניה בתחנה התחתונה; אם בוחרים לעלות ברכב לרמה – ודאו הזמנת P1/P2',
+      'נעלי הליכה, שכבות, מים וקרם הגנה',
+      'צאו מוקדם כדי ליהנות מיום מלא על הרמה'
+    ],
+    5:[
+      'אישור שעת רכיבה ב-Maneggio Unterlanzin',
+      'לבוש ונעליים מתאימים לרכיבה',
+      'כרטיסי Terme Merano / אישור הזמנה',
+      'בגדי ים, כפכפים ומגבות/ציוד ספא',
+      'בדקו חניה וניווט ל-Terme Merano'
+    ],
+    6:[
+      'אישור הזמנת Avisio Rafting ושעת התייצבות',
+      'בגד ים, מגבת ובגדים להחלפה',
+      'נעליים/ציוד לפי הנחיות המפעיל',
+      'מים וחטיף לאחר הפעילות',
+      'נווטו ישירות ל-Avisio Rafting, Lago di Tesero'
+    ],
+    7:[
+      'יום מעבר: כל המזוודות נסתרות בתא המטען לפני כל עצירה',
+      'בדקו מצב כבישים ומזג אוויר ב-Passo Sella',
+      'נווטו לפי הסדר: Passo Sella → Lago di Carezza → Cavalese → Riva',
+      'השתמשו בחניוני המזוודות המסומנים באפליקציה',
+      'מים, שכבות ומעיל קל זמינים בתיק קטן ולא במזוודה'
+    ],
+    8:[
+      'בדקו שעות פתיחה של Cascata del Varone',
+      'נעליים נוחות ומשהו נגד רטיבות/טפטוף במפל',
+      'בדקו חניה ב-Limone לפני היציאה',
+      'מים וכובע לטיילת'
+    ],
+    9:[
+      'בדקו פתיחה ומזג אוויר ב-Busatte Adventure Park',
+      'נעליים סגורות ונוחות לפארק חבלים',
+      'בדקו מגבלות גיל/גובה לפי הצורך',
+      'מים ובגדים נוחים לפעילות'
+    ],
+    10:[
+      'בדקו מזג אוויר ב-Lago di Tenno',
+      'נעלי הליכה, מים ובגדי ים אם מזג האוויר מתאים',
+      'נווטו לחניה באגם ולאחר מכן ל-Canale di Tenno',
+      'שמרו זמן רגוע לכפר ולעצירות צילום'
+    ],
+    11:[
+      'יום מעבר: כל המזוודות נסתרות בתא המטען',
+      'נווטו ל-Parcheggio Funivia Malcesine',
+      'בדקו אם מתוכנן רכבל/שיטוט בלבד לפי הזמן',
+      'וודאו כתובת הלינה ב-Lazise לפני היציאה מ-Malcesine'
+    ],
+    12:[
+      'בדקו/אשרו כרטיסי SPA & Thermal Garden Sirmione',
+      'בגדי ים, כפכפים ומגבות/ציוד ספא',
+      'נווטו לחניה מחוץ ל-ZTL בסירמיונה',
+      'צאו מוקדם כדי להימנע מעומס בכניסה לעיר העתיקה'
+    ],
+    13:[
+      'נווטו לחניה מחוץ ל-ZTL ב-Verona',
+      'נעליים נוחות ליום עירוני',
+      'מים/כובע לפי מזג האוויר',
+      'בדקו אם יש אירוע מיוחד ב-Arena שעלול להשפיע על עומס/חניה'
+    ],
+    14:[
+      'בדקו שעות פתיחה של South Garda Karting',
+      'נעליים סגורות לפעילות',
+      'בדקו דרישות גיל/גובה לילדים',
+      'נווטו לאחר מכן ל-Bardolino וחניה מרכזית'
+    ],
+    15:[
+      'יום מעבר: כל המזוודות נסתרות בתא המטען',
+      'כרטיסי Museo Ferrari / אישור הזמנה זמינים',
+      'נווטו לחניה ליד Museo Ferrari / Via Fornace',
+      'לפני כניסה למילאנו ודאו Duomo Parking – Via Olmetto 9',
+      'הימנעו מפתיחת תא המטען במרכזי הערים'
+    ],
+    16:[
+      'דרכונים, כרטיסי טיסה ומסמכי הרכב מוכנים',
+      'בדקו זמן החזרת הרכב והגעה ל-Terminal 1',
+      'כל המטענים והציוד האישי נאספו מהמלון',
+      'צאו עם מרווח ביטחון לשדה'
+    ]
+  };
+
+  function renderPreflight(day){
+    const items=smartPreflight[day]||[
+      'בדקו מזג אוויר',
+      'בדקו שעות פתיחה/מצב אטרקציה',
+      'בדקו כרטיסים/הזמנות',
+      'בדקו חניה וניווט',
+      'מים, מטענים וציוד אישי'
+    ];
+    return `<div class="smart-card">
+      <div class="smart-title">לפני שיוצאים</div>
+      <div class="smart-check">
+        ${items.map(item=>`<div>✓ ${item}</div>`).join('')}
+      </div>
+    </div>`;
+  }
+
+function renderToday(){
     const holder=document.getElementById('todayContainer');
     if(!holder || typeof days==='undefined' || !days.length) return;
 
@@ -1563,16 +1685,7 @@ function renderTomorrow(now,day){
         <div class="smart-alert">${info.note||''}</div>
       </div>
 
-      <div class="smart-card">
-        <div class="smart-title">לפני שיוצאים</div>
-        <div class="smart-check">
-          <div>✓ מזג אוויר</div>
-          <div>✓ מצב רכבלים / אטרקציה</div>
-          <div>✓ כרטיסים / הזמנות</div>
-          <div>✓ חניה ו-ZTL</div>
-          <div>✓ מים, מטענים וציוד</div>
-        </div>
-      </div>
+      ${renderPreflight(day)}
 
       <div class="smart-section">
         <div class="smart-title">🕒 סדר היום</div>
@@ -1661,7 +1774,7 @@ function renderTomorrow(now,day){
       });
 
       const reg = await navigator.serviceWorker.register(
-        './service-worker.js?v=8-cachefix',
+        './service-worker.js?v=9-preflight',
         { updateViaCache: 'none' }
       );
       await reg.update();

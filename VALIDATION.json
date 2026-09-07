@@ -1,12 +1,19 @@
 {
   "checks": {
+    "dynamic_preflight_data": true,
+    "render_preflight_function": true,
+    "render_preflight_called": true,
+    "secada_specific": true,
+    "alpe_specific": true,
+    "rafting_specific": true,
+    "transition_luggage": true,
+    "spa_specific": true,
+    "flight_specific": true,
     "all_tabs_present": true,
     "central_switcher_present": true,
-    "versioned_sw_registration": true,
-    "updateViaCache_none": true,
-    "app_cache_cleanup_only": true,
-    "html_not_in_sw_assets": true,
-    "navigation_no_store": true,
+    "cachefix_registration": true,
+    "html_not_cached": true,
+    "all_16_dates": true,
     "javascript_syntax": true
   },
   "js_message": ""

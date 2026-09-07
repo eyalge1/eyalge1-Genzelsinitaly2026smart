@@ -1,4 +1,4 @@
-const CACHE_NAME = 'Genzelsinitaly2026smart-v8-assets-20260907';
+const CACHE_NAME = 'Genzelsinitaly2026smart-v9-preflight-20260907';
 const ASSETS = [
   './manifest.webmanifest',
   './icons/icon-192.png',

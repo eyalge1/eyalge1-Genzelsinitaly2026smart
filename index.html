@@ -158,39 +158,10 @@ textarea{width:100%;min-height:86px;border:1px solid var(--line);border-radius:1
 
 
 <style id="smart-day-picker-style">
-.smart-day-picker{
-  background:#fff;
-  border:1px solid #d1d5db;
-  border-radius:14px;
-  padding:12px;
-  margin:0 0 12px;
-  box-shadow:0 8px 24px rgba(15,23,42,.08);
-}
-.smart-day-picker label{
-  display:block;
-  font-weight:800;
-  font-size:14px;
-  margin-bottom:8px;
-  color:#18212f;
-}
-.smart-day-picker select{
-  display:block;
-  width:100%;
-  min-height:44px;
-  padding:10px 12px;
-  border:1px solid #cbd5e1;
-  border-radius:12px;
-  background:#fff;
-  color:#18212f;
-  font:inherit;
-  font-size:14px;
-}
-.smart-day-picker-note{
-  margin-top:7px;
-  font-size:12px;
-  line-height:1.45;
-  color:#64748b;
-}
+.smart-day-picker{background:#fff;border:1px solid #d1d5db;border-radius:14px;padding:12px;margin:0 0 12px;box-shadow:0 8px 24px rgba(15,23,42,.08)}
+.smart-day-picker label{display:block;font-weight:800;font-size:14px;margin-bottom:8px;color:#18212f}
+.smart-day-picker select{display:block;width:100%;min-height:44px;padding:10px 12px;border:1px solid #cbd5e1;border-radius:12px;background:#fff;color:#18212f;font:inherit;font-size:14px}
+.smart-day-picker-note{margin-top:7px;font-size:12px;line-height:1.45;color:#64748b}
 </style>
 
 
@@ -203,17 +174,30 @@ textarea{width:100%;min-height:86px;border:1px solid var(--line);border-radius:1
 <meta name="apple-mobile-web-app-title" content="Genzelsinitaly2026smart">
 <meta name="description" content="Genzelsinitaly2026smart – האפליקציה החכמה לטיול המשפחתי באיטליה 2026">
 
+
+<style id="smart-booking-current-style">
+.smart-bookings-current{background:#fff;border:1px solid #dbeafe;border-radius:16px;padding:13px;margin:12px 0;box-shadow:0 8px 24px rgba(15,23,42,.08)}
+.smart-bookings-current .smart-title{margin-bottom:8px}
+.smart-booking-current-item{background:#f8fafc;border:1px solid #e2e8f0;border-radius:13px;padding:11px;margin-top:9px}
+.smart-booking-current-item .booking-head{display:flex;gap:8px;align-items:flex-start;justify-content:space-between}
+.smart-booking-current-item .booking-name{font-weight:800;font-size:14px;line-height:1.4}
+.smart-booking-current-item .booking-type{font-size:11px;font-weight:800;padding:4px 7px;border-radius:999px;background:#eef2ff;color:#4338ca;white-space:nowrap}
+.smart-booking-current-item .booking-priority{font-size:12px;font-weight:800;color:#9a3412;margin-top:6px}
+.smart-booking-current-item .booking-status{font-size:12px;color:#64748b;line-height:1.55;margin-top:5px}
+.smart-booking-current-item .booking-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:9px}
+</style>
+
 </head>
 <body>
 <div class="app">
   <div class="hero">
     <h1>טיול משפחתי אופליין – 13/9 עד 28/9</h1>
     <p>גרסה מלאה ומתוקנת עם כל ימי הטיול, טאב חניות נפרד, וקישור פנימי מכל יום לטאב החניות.</p>
-    <div class="summary">
-      <div class="stat"><strong>16</strong>ימים</div>
-      <div class="stat"><strong>5</strong>לילות דולומיטים</div>
-      <div class="stat"><strong>4</strong>לילות צפון גארדה</div>
-      <div class="stat"><strong>28/9</strong>סיום</div>
+    <div class="summary" id="smartHeroSummary">
+      <div class="stat"><strong id="heroDrive">—</strong><span>נהיגה היום</span></div>
+      <div class="stat"><strong id="heroConditions">—</strong><span>מזג אוויר / תנאים</span></div>
+      <div class="stat"><strong id="heroBookings">—</strong><span>פעולות להזמנה</span></div>
+      <div class="stat"><strong id="heroTiming">—</strong><span id="heroTimingLabel">תזמון מרכזי</span></div>
     </div>
   </div>
   <div class="content">
@@ -257,7 +241,20 @@ function gmaps(a){return 'https://www.google.com/maps/search/?api=1&query='+enco
 function waze(a){return 'https://www.waze.com/ul?q='+encodeURIComponent(a)+'&navigate=yes';}
 function gmapsDir(a,b){return 'https://www.google.com/maps/dir/'+encodeURIComponent(a)+'/'+encodeURIComponent(b);}
 function openNav(url){window.location.href=url;}
-function switchTab(tab){document.querySelectorAll('.navbtn').forEach(n=>n.classList.toggle('active',n.dataset.tab===tab));['days','dolomites','food','parkinghub','budget','packing','overview'].forEach(id=>document.getElementById(id).classList.toggle('hidden',id!==tab));window.scrollTo({top:0,behavior:'smooth'});}
+function switchTab(tab){
+  const validTabs=['today','days','dolomites','food','parkinghub','budget','packing','overview'];
+  if(!validTabs.includes(tab)) return;
+  document.querySelectorAll('.navbtn').forEach(n=>{
+    n.classList.toggle('active', n.dataset.tab===tab);
+  });
+  document.querySelectorAll('.content > section').forEach(section=>{
+    section.classList.toggle('hidden', section.id!==tab);
+  });
+  if(tab==='today' && typeof renderToday==='function'){
+    renderToday();
+  }
+  window.scrollTo({top:0,behavior:'smooth'});
+}
 function navBlock(label,address){return `<div class="navrow"><div class="navlabel">${label}</div><div class="navactions"><button class="navbtn2 gmaps" data-url="${gmaps(address)}">Google Maps</button><button class="navbtn2 waze" data-url="${waze(address)}">Waze</button></div></div>`;}
 function buildFilters(){const c=document.getElementById('dayFilters');const dayLabels={'1': 'יום א׳ 13/9', '2': 'יום ב׳ 14/9', '3': 'יום ג׳ 15/9', '4': 'יום ד׳ 16/9', '5': 'יום ה׳ 17/9', '6': 'יום ו׳ 18/9', '7': 'שבת 19/9', '8': 'יום א׳ 20/9', '9': 'יום ב׳ 21/9', '10': 'יום ג׳ 22/9', '11': 'יום ד׳ 23/9', '12': 'יום ה׳ 24/9', '13': 'יום ו׳ 25/9', '14': 'שבת 26/9', '15': 'יום א׳ 27/9', '16': 'יום ב׳ 28/9'};const filters=[{key:'all',label:'כל הימים'},...Array.from({length:days.length},(_,i)=>{const key=String(i+1);return {key,label:dayLabels[key]||`יום ${i+1}`};})];filters.forEach(f=>{const b=document.createElement('button');b.className='chip'+(f.key==='all'?' active':'');b.textContent=f.label;b.onclick=()=>{document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.day-card').forEach(card=>card.classList.toggle('hidden',!(f.key==='all'||card.dataset.day===f.key)));};c.appendChild(b);});}
 function renderDays(){const container=document.getElementById('daysContainer');container.innerHTML='';days.forEach(d=>{const segs=d.segments.map((seg,i)=>`<div class="item"><div class="time">${seg.time}</div><div><h3>${seg.label}</h3><p>${seg.details}</p></div><div class="donebox"><input class="check" type="checkbox" data-key="day_${d.day}_seg_${i}" /><span class="done-label">בוצע</span></div></div>`).join('');let dolo='';if(d.hotel_routes){const items=d.hotel_routes.items.map(it=>`<div class="navrow"><div class="navlabel">${it.label}</div><div class="navactions"><button class="navbtn2 gmaps" data-url="${gmapsDir(it.from,it.to)}">Google Maps</button><button class="navbtn2 waze" data-url="${waze(it.to)}">Waze</button></div></div>`).join('');dolo=`<div class="dolobox"><div class="navlabel">${d.hotel_routes.title}</div><div class="muted">${d.hotel_routes.note}</div>${items}</div>`;} const foodEntries=[['משפחה',d.food.family],['בוקר קל',d.food.breakfast],['גלידה',d.food.gelato],['זוגי/ערב',d.food.date]].map(x=>`<div class="foodentry"><div class="foodname"><strong>${x[0]}:</strong> ${x[1]}</div><div class="foodactions"><button class="navbtn2 gmaps" data-url="${gmaps(x[1]+' '+d.area)}">Google Maps</button><button class="navbtn2 waze" data-url="${waze(x[1]+' '+d.area)}">Waze</button></div></div>`).join('');container.insertAdjacentHTML('beforeend',`<div class="card day-card" data-day="${d.day}"><div><span class="badge">יום ${d.day} · ${d.date}</span><span class="dayload ${d.load_class}">${d.load_label}</span></div><h2>${d.title}</h2><div class="meta"><div><strong>אזור:</strong> ${d.area}</div><div><strong>לינה:</strong> ${d.sleep}</div><div><strong>נסיעה:</strong> ${d.drive}</div></div><div class="dayroutebox"><div class="navlabel">ניווט לכל היום / היעד המרכזי</div>${navBlock(d.main_target.label,d.main_target.address)}</div>${dolo}<div class="linkbox"><div class="navlabel">קיצור פנימי</div><button class="jumplink" data-tab-target="parkinghub">לחניות ערים מרכזיות</button></div><div class="timeline">${segs}</div><div class="navbox"><div class="navlabel">יעדים מרכזיים ביום</div><div class="navlinks">${d.targets.map(t=>navBlock(t.label,t.address)).join('')}</div></div><div class="parkbox"><div class="navlabel">חניות ליום זה</div><div class="navlinks">${d.parkings.map(p=>navBlock(p.name,p.address)).join('')}</div></div><div class="foodbox"><div class="navlabel">אוכל לאותו יום / אזור</div>${foodEntries}</div><div class="notesbox"><div class="navlabel">הערות אישיות ליום זה</div><textarea data-note="day_${d.day}" placeholder="למשל: כרטיסים, מזג אוויר, חניה חלופית..."></textarea></div></div>`);});}
@@ -1204,32 +1201,149 @@ buildFilters();renderDays();renderFood();renderParkingHub();renderBudget();rende
     16:{drive:'קצר',walk:'מינימלי',cost:'נמוך',gear:'מסמכי טיסה',note:'טיסה מוקדמת. להכין הכל ערב קודם.',depart:'02:00'}
   };
 
-  const bookingPrep = {
+  
+  const smartConditionInfo = {
+    1:'עירוני',
+    2:'אגם / מעבר',
+    3:'הרים',
+    4:'הרים',
+    5:'מעורב',
+    6:'מים / חוץ',
+    7:'הרים / מעבר',
+    8:'אגם',
+    9:'חוץ',
+    10:'אגם / טבע',
+    11:'אגם / מעבר',
+    12:'עירוני / ספא',
+    13:'עירוני',
+    14:'חוץ',
+    15:'עירוני / מעבר',
+    16:'טיסה'
+  };
+
+  function updateSmartHero(day){
+    const d=days.find(x=>x.day===day)||days[0];
+    const info=smartDayInfo[day]||{};
+    const bookings=(bookingPrep[day]||[]).length;
+    const firstSegment=(d.segments||[])[0]||{};
+    const driveEl=document.getElementById('heroDrive');
+    const condEl=document.getElementById('heroConditions');
+    const bookEl=document.getElementById('heroBookings');
+    const timingEl=document.getElementById('heroTiming');
+    const timingLabel=document.getElementById('heroTimingLabel');
+    if(driveEl) driveEl.textContent=info.drive||d.drive||'—';
+    if(condEl) condEl.textContent=smartConditionInfo[day]||'—';
+    if(bookEl) bookEl.textContent=String(bookings);
+    if(timingEl) timingEl.textContent=firstSegment.time||info.depart||'—';
+    if(timingLabel) timingLabel.textContent=firstSegment.label||'תזמון מרכזי';
+  }
+
+const bookingPrep = {
     3:[
-      {name:'Seceda – כרטיסי רכבל',status:'אפשר ומומלץ לרכוש מראש',url:'https://www.seceda.it/en/tickets.php',button:'כרטיסים רשמיים'}
+      {
+        name:'Seceda – כרטיסי רכבל',
+        type:'כרטיסי רכבל',
+        priority:'מומלץ',
+        status:'מומלץ לרכוש מראש כדי לחסוך זמן בקופות.',
+        url:'https://www.seceda.it/en/tickets.php',
+        button:'הזמנה באתר הרשמי',
+        address:"Funivie Seceda, Via Val d'Anna 2, 39046 Ortisei, Italy"
+      }
     ],
     4:[
-      {name:'Alpe di Siusi – רכבל Seis–Compatsch',status:'אפשר לרכוש כרטיסים מראש; בדוק זמינות ושעות',url:'https://www.seiseralm.it/en/info-service/mobility/parking.html',button:'מידע רשמי'},
-      {name:'Alpe di Siusi – P1/P2',status:'אם עולים ברכב לרמה: נדרשת הזמנת חניה מראש בעונת קיץ 2026. המסלול שלנו מעדיף חניה בעמק + רכבל.',url:'https://www.seiseralm.it/en/info-service/mobility/access-to-seiser-alm/seiser-alm-parking-reservation.html',button:'הזמנת חניה'}
+      {
+        name:'Alpe di Siusi – רכבל Seis–Compatsch',
+        type:'כרטיסי רכבל',
+        priority:'מומלץ',
+        status:'אפשר לרכוש אונליין. במסלול שלנו עדיף לחנות בתחנה התחתונה ולעלות ברכבל.',
+        url:'https://shop.dolomitisuperski.com/companyshop.ashx?area=531&lang=1&valley=400&zone=26',
+        button:'רכישת כרטיסים רשמית',
+        address:'Seiser Alm Aerial Cableway, Schlernstrasse 39, 39040 Seis am Schlern, Italy'
+      },
+      {
+        name:'Alpe di Siusi – חניית P1/P2 על הרמה',
+        type:'הזמנת חניה',
+        priority:'רק אם נוסעים ברכב לרמה',
+        status:'מ־29.6.2026 נדרשת הזמנה מראש ל-P1/P2. ניתן להזמין עד 6 ימים לפני ההגעה. במסלול שלנו זו חלופה בלבד לרכבל.',
+        url:'https://www.seiseralm.it/en/info-service/mobility/access-to-seiser-alm/seiser-alm-parking-reservation.html',
+        button:'הזמנת חניה רשמית',
+        address:'Parking P2 Compatsch, Compatsch 15, 39040 Seiser Alm, Italy'
+      }
     ],
     5:[
-      {name:'רכיבה – Maneggio Unterlanzin',status:'מומלץ לוודא/להזמין מראש',url:'https://www.google.com/search?q=Maneggio+Unterlanzin+Castelrotto',button:'פרטי המקום'},
-      {name:'Terme Merano',status:'מומלץ להזמין מראש כדי להבטיח כניסה',url:'https://www.termemerano.it/en/shop/',button:'הזמנת כניסה'}
+      {
+        name:'Maneggio Unterlanzin – רכיבה',
+        type:'הזמנת פעילות',
+        priority:'מומלץ',
+        status:'מומלץ לתאם מראש את שעת הרכיבה. באתר הרשמי מופיעים פרטי הקשר.',
+        url:'https://www.unterlanzin.it/en/',
+        button:'אתר רשמי / פרטי קשר',
+        address:'Unterlanzin, Telfen Lanzin 61A, 39040 Castelrotto, Italy'
+      },
+      {
+        name:'Terme Merano',
+        type:'כרטיסי כניסה',
+        priority:'מומלץ מאוד',
+        status:'מומלץ להזמין מראש כדי להבטיח כניסה; האתר הרשמי מאפשר בחירת תאריך.',
+        url:'https://www.termemerano.it/en/shop/',
+        button:'הזמנת כניסה רשמית',
+        address:'Terme Merano, Piazza Terme 9, 39012 Merano, Italy'
+      }
     ],
     6:[
-      {name:'Avisio Rafting',status:'להזמין מראש ולוודא שעת התייצבות',url:'https://www.google.com/search?q=Avisio+Rafting+Tesero',button:'פרטי הזמנה'}
+      {
+        name:'Avisio Rafting',
+        type:'הזמנת פעילות',
+        priority:'נדרש',
+        status:'להזמין מראש ולוודא שעת התייצבות. ההזמנה מתבצעת באתר הרשמי.',
+        url:'https://www.avisiorafting.it/booking-rafting/en/',
+        button:'הזמנת Rafting רשמית',
+        address:'Avisio Rafting, Lago di Tesero, 38038 Tesero TN, Italy'
+      }
     ],
     9:[
-      {name:'Busatte Adventure Park',status:'מומלץ לבדוק שעות ופתיחה יום לפני',url:'https://www.google.com/search?q=Busatte+Adventure+Park+Torbole',button:'בדיקת פתיחה'}
+      {
+        name:'Busatte Adventure Park',
+        type:'בדיקת פתיחה',
+        priority:'לא נדרש למשפחה של 5',
+        status:'לפי האתר הרשמי, הזמנה רצויה רק לקבוצות מעל 10. למשפחה שלנו יש לבדוק שעות פתיחה ומזג אוויר.',
+        url:'https://busatteadventure.com/calendario/',
+        button:'שעות ומחירים רשמיים',
+        address:'Busatte Adventure Park, Loc. Busatte, 38069 Nago-Torbole TN, Italy'
+      }
     ],
     12:[
-      {name:'Aquaria Thermal SPA',status:'מומלץ להזמין כניסה מראש',url:'https://www.aquariaterme.it/',button:'אתר/הזמנה'}
+      {
+        name:'SPA & Thermal Garden Sirmione (Aquaria)',
+        type:'כרטיסי כניסה',
+        priority:'מומלץ',
+        status:'מומלץ להזמין מראש לפי תאריך ושעה, במיוחד למשפחה.',
+        url:'https://spathermalgarden.termedisirmione.com/en/booking/date',
+        button:'הזמנה רשמית',
+        address:'SPA & Thermal Garden, Sirmione, Italy'
+      }
     ],
     14:[
-      {name:'South Garda Karting',status:'מומלץ לבדוק שעות וזמינות',url:'https://www.southgardakarting.it/',button:'אתר רשמי'}
+      {
+        name:'South Garda Karting',
+        type:'בדיקת שעות',
+        priority:'אין צורך בהזמנה',
+        status:'לפי אתר ה-Rental הרשמי אין צורך להזמין מראש; מגיעים ביום הפעילות. יש לבדוק שעות פתיחה.',
+        url:'https://rental.southgardakarting.it/en',
+        button:'אתר Rental רשמי',
+        address:'South Garda Karting, Via Corte Ferrarini 5, 25017 Lonato del Garda BS, Italy'
+      }
     ],
     15:[
-      {name:'Museo Ferrari Maranello',status:'מומלץ לוודא כרטיסים ושעת כניסה מראש',url:'https://www.ferrari.com/en-EN/museums/ferrari-maranello',button:'אתר המוזיאון'}
+      {
+        name:'Museo Ferrari Maranello',
+        type:'כרטיסי מוזיאון',
+        priority:'מומלץ',
+        status:'מומלץ לרכוש כרטיסים מראש ולוודא שעת כניסה. הקישור מוביל לעמוד הרשמי של המוזיאון.',
+        url:'https://www.ferrari.com/en-EN/museums/ferrari-maranello',
+        button:'אתר מוזיאון Ferrari הרשמי',
+        address:'Museo Ferrari, Via Alfredo Dino Ferrari 43, 41053 Maranello MO, Italy'
+      }
     ]
   };
 
@@ -1342,7 +1456,35 @@ buildFilters();renderDays();renderFood();renderParkingHub();renderBudget();rende
     return html || '<div class="smart-subtle">אין מידע אוכל מוגדר ליום זה.</div>';
   }
 
-  function renderTomorrow(now,day){
+  
+  function renderCurrentBookings(day){
+    const bookings=bookingPrep[day]||[];
+    if(!bookings.length){
+      return `<div class="smart-bookings-current">
+        <div class="smart-title">🎟️ הזמנות, כרטיסים וחניה מראש</div>
+        <div class="smart-subtle">אין ליום הזה הזמנה מיוחדת שהוגדרה מראש. עדיין כדאי לבדוק שעות פתיחה, מזג אוויר וחניה.</div>
+      </div>`;
+    }
+    return `<div class="smart-bookings-current">
+      <div class="smart-title">🎟️ הזמנות, כרטיסים וחניה מראש</div>
+      <div class="smart-subtle">כל מה שכדאי לסגור או לבדוק מראש ליום הנבחר, עם קישור רשמי וניווט.</div>
+      ${bookings.map(b=>`
+        <div class="smart-booking-current-item">
+          <div class="booking-head">
+            <div class="booking-name">${b.name}</div>
+            <div class="booking-type">${b.type||'הזמנה'}</div>
+          </div>
+          <div class="booking-priority">${b.priority||''}</div>
+          <div class="booking-status">${b.status||''}</div>
+          <div class="booking-actions">
+            <button class="navbtn2 gmaps" data-url="${b.url}">${b.button||'אתר רשמי'}</button>
+            <button class="navbtn2 waze" data-url="${gmaps(b.address||'')}">ניווט ליעד</button>
+          </div>
+        </div>`).join('')}
+    </div>`;
+  }
+
+function renderTomorrow(now,day){
     const inTrip = now >= SMART_START && now <= SMART_END;
     if(!inTrip || now.getHours()<16 || day>=16){
       return `<div class="smart-card"><div class="smart-title">מחר – הכנה מוקדמת</div>
@@ -1418,10 +1560,23 @@ buildFilters();renderDays();renderFood();renderParkingHub();renderBudget();rende
         <div class="smart-alert">${info.note||''}</div>
       </div>
 
+      <div class="smart-card">
+        <div class="smart-title">לפני שיוצאים</div>
+        <div class="smart-check">
+          <div>✓ מזג אוויר</div>
+          <div>✓ מצב רכבלים / אטרקציה</div>
+          <div>✓ כרטיסים / הזמנות</div>
+          <div>✓ חניה ו-ZTL</div>
+          <div>✓ מים, מטענים וציוד</div>
+        </div>
+      </div>
+
       <div class="smart-section">
         <div class="smart-title">🕒 סדר היום</div>
         ${source?.querySelector('.timeline')?.outerHTML || ''}
       </div>
+
+      ${renderCurrentBookings(day)}
 
       <div class="smart-drive">
         <h3>🚗 מצב בדרך</h3>
@@ -1441,17 +1596,6 @@ buildFilters();renderDays();renderFood();renderParkingHub();renderBudget();rende
         ${renderFood(d,source)}
       </div>
 
-      <div class="smart-card">
-        <div class="smart-title">לפני שיוצאים</div>
-        <div class="smart-check">
-          <div>✓ מזג אוויר</div>
-          <div>✓ מצב רכבלים / אטרקציה</div>
-          <div>✓ כרטיסים / הזמנות</div>
-          <div>✓ חניה ו-ZTL</div>
-          <div>✓ מים, מטענים וציוד</div>
-        </div>
-      </div>
-
       ${renderTomorrow(now,day)}
     `;
 
@@ -1464,32 +1608,21 @@ buildFilters();renderDays();renderFood();renderParkingHub();renderBudget();rende
       });
     }
 
+    updateSmartHero(day);
+
     holder.querySelectorAll('.navbtn2').forEach(btn=>{
       btn.addEventListener('click',()=>openNav(btn.dataset.url));
     });
   }
 
   function keepTodayTabBehavior(){
-    document.querySelectorAll('.navbtn').forEach(btn=>{
-      btn.addEventListener('click',()=>{
-        const today=document.getElementById('today');
-        if(!today) return;
-        if(btn.dataset.tab==='today'){
-          document.querySelectorAll('.content > section').forEach(s=>s.classList.add('hidden'));
-          today.classList.remove('hidden');
-        } else {
-          today.classList.add('hidden');
-        }
-      });
-    });
+    // All bottom navigation is handled centrally by switchTab().
   }
 
   function initSmart(){
     keepTodayTabBehavior();
     renderToday();
-    document.querySelectorAll('.content > section').forEach(s=>s.classList.add('hidden'));
-    document.getElementById('today')?.classList.remove('hidden');
-    document.querySelectorAll('.navbtn').forEach(b=>b.classList.toggle('active',b.dataset.tab==='today'));
+    switchTab('today');
   }
 
   if(document.readyState==='loading'){

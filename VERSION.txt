@@ -1,4 +1,4 @@
 Genzelsinitaly2026smart
 SMART v4 on v18 base
-UI fix v3: dropdown + timeline order
-Build: 2026-09-07
+Build v7-fixed: bottom navigation repaired
+2026-09-07

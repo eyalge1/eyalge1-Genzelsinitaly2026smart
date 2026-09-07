@@ -14,3 +14,11 @@
 בגרסה זו `switchTab()` שולט בכל הלשוניות.
 
 יש להעלות את כל תוכן התיקייה לשורש ה-repository ולהחליף את הקבצים הקיימים.
+
+## v8 – תיקון GitHub Pages / Cache
+הגרסה הזו פותרת מצב שבו `index.html` המקומי עובד אבל GitHub Pages ממשיך להריץ JavaScript ישן:
+- HTML אינו נשמר עוד ב-Service Worker.
+- ניווט תמיד נטען מהשרת עם `no-store`.
+- ה-Service Worker נרשם עם `updateViaCache: none`.
+- בעת עדכון Service Worker מתבצע reload יחיד אוטומטי.
+- נמחקים רק caches ששייכים ל-Genzelsinitaly2026smart.

@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>Genzelsinitaly2026smart</title>
 <meta name="theme-color" content="#2563eb">
 <style>
@@ -1635,11 +1638,38 @@ function renderTomorrow(now,day){
 
 
 <script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function () {
-    navigator.serviceWorker.register('./service-worker.js').catch(function () {});
+(function(){
+  if (!('serviceWorker' in navigator)) return;
+
+  window.addEventListener('load', async function () {
+    try {
+      // Delete only caches belonging to THIS app/version family.
+      if ('caches' in window) {
+        const keys = await caches.keys();
+        await Promise.all(
+          keys
+            .filter(k => k.startsWith('Genzelsinitaly2026smart-'))
+            .map(k => caches.delete(k))
+        );
+      }
+
+      let reloaded = false;
+      navigator.serviceWorker.addEventListener('controllerchange', function () {
+        if (reloaded) return;
+        reloaded = true;
+        window.location.reload();
+      });
+
+      const reg = await navigator.serviceWorker.register(
+        './service-worker.js?v=8-cachefix',
+        { updateViaCache: 'none' }
+      );
+      await reg.update();
+    } catch (e) {
+      console.warn('Service worker update failed', e);
+    }
   });
-}
+})();
 </script>
 </body>
 </html>

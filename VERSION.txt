@@ -1,4 +1,4 @@
 Genzelsinitaly2026smart
 SMART v4 on v18 base
-Build v7-fixed: bottom navigation repaired
+Build v8-cachefix: GitHub Pages cache/service-worker fix
 2026-09-07

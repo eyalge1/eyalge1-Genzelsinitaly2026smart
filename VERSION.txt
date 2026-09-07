@@ -1,0 +1,4 @@
+App: Genzelsinitaly2026smart
+Version: v18-smart-20260907
+Target repository: eyalge1/eyalge1-Genzelsinitaly2026smart
+Separate from: eyalge1/Genzelsinitaly2026

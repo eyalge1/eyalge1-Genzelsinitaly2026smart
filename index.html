@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>טיול משפחתי אופליין – 13/9–28/9</title>
+<title>Genzelsinitaly2026smart</title>
 <meta name="theme-color" content="#2563eb">
 <style>
 :root{--bg:#f6f7fb;--card:#fff;--text:#18212f;--muted:#64748b;--line:#e5e7eb;--brand:#2563eb;--brand2:#0ea5e9;--good:#16a34a;--chip:#eff6ff;--shadow:0 8px 24px rgba(15,23,42,.08);--radius:18px}
@@ -126,11 +126,19 @@ textarea{width:100%;min-height:86px;border:1px solid var(--line);border-radius:1
 }
 </style>
 
+
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
+<link rel="apple-touch-icon" href="./icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Genzelsinitaly2026smart">
+<meta name="description" content="Genzelsinitaly2026smart – תוכנית הטיול המשפחתית לאיטליה 2026">
 </head>
 <body>
 <div class="app">
   <div class="hero">
-    <h1>טיול משפחתי אופליין – 13/9 עד 28/9</h1>
+    <h1>Genzelsinitaly2026smart</h1>
     <p>גרסה מלאה ומתוקנת עם כל ימי הטיול, טאב חניות נפרד, וקישור פנימי מכל יום לטאב החניות.</p>
     <div class="summary">
       <div class="stat"><strong>16</strong>ימים</div>
@@ -1096,5 +1104,13 @@ buildFilters();renderDays();renderFood();renderParkingHub();renderBudget();rende
 })();
 </script>
 
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./service-worker.js').catch(console.error);
+  });
+}
+</script>
 </body>
 </html>

@@ -1,0 +1,2 @@
+Located source in File Library: Genzelsinitaly2026-SMART-v4.html (created 2026-09-05).
+This GitHub package rebuilds that SMART Today layer on the local v18 itinerary base and keeps a separate app identity/cache.

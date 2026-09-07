@@ -1,7 +1,7 @@
 {
   "name": "Genzelsinitaly2026smart",
   "short_name": "Genzelsinitaly2026smart",
-  "description": "תוכנית הטיול המשפחתית לאיטליה 2026 – גארדה והדולומיטים",
+  "description": "אפליקציית הטיול המשפחתית החכמה לאיטליה 2026 – עם לשונית היום",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

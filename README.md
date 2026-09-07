@@ -1,13 +1,16 @@
 # Genzelsinitaly2026smart
 
-אפליקציית הטיול המשפחתית לאיטליה 2026 – גרסה נפרדת ועצמאית.
+GitHub Pages package for the separate SMART trip app.
 
-Repository intended for this package: `eyalge1/eyalge1-Genzelsinitaly2026smart`
+## Upload
+Upload the **contents** of this folder to the root of `eyalge1/eyalge1-Genzelsinitaly2026smart` on branch `main`.
+Keep the `icons/` directory as a directory.
 
-This package is intentionally separate from `eyalge1/Genzelsinitaly2026`.
+GitHub Pages: Settings → Pages → Deploy from branch → `main` → `/(root)`.
 
-## GitHub Pages
-Deploy from branch `main` and folder `/(root)`.
-
-## Package version
-v18 smart package, 2026-09-07.
+## Included SMART behavior
+- `היום` tab opens by default.
+- Automatically selects trip day for 13/9/2026–28/9/2026.
+- Shows driving, walking, cost, load, gear, navigation, parking, food and day schedule.
+- From 16:00 during the trip, shows preparation for tomorrow, including bookings and parking.
+- Separate PWA/cache from the older `eyalge1/Genzelsinitaly2026` app.

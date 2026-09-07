@@ -1,0 +1,15 @@
+קבצים לעדכון ב-GitHub
+=======================
+
+העלה את שלושת הקבצים הבאים לשורש ה-repository:
+- index.html
+- manifest.webmanifest
+- service-worker.js
+
+אין צורך לגעת בקבצי icon-192.png ו-icon-512.png שכבר קיימים ב-repository.
+
+לאחר ההעלאה:
+1. Commit changes
+2. המתן 1-2 דקות
+3. רענן את אתר GitHub Pages
+4. אם עדיין מוצגת גרסה ישנה, סגור את האפליקציה/הדפדפן ופתח שוב.

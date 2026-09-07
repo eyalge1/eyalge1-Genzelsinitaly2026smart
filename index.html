@@ -1,0 +1,1100 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>טיול משפחתי אופליין – 13/9–28/9</title>
+<meta name="theme-color" content="#2563eb">
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--text:#18212f;--muted:#64748b;--line:#e5e7eb;--brand:#2563eb;--brand2:#0ea5e9;--good:#16a34a;--chip:#eff6ff;--shadow:0 8px 24px rgba(15,23,42,.08);--radius:18px}
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text)}
+.app{max-width:480px;margin:0 auto;min-height:100vh;background:var(--bg);padding-bottom:88px}
+.hero{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;padding:22px 18px 18px;border-bottom-left-radius:24px;border-bottom-right-radius:24px;position:sticky;top:0;z-index:5;box-shadow:var(--shadow)}
+.hero h1{margin:0 0 8px;font-size:22px}.hero p{margin:0;opacity:.95;font-size:14px;line-height:1.45}
+.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}.stat{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:10px;text-align:center}.stat strong{display:block;font-size:17px;margin-bottom:4px}
+.content{padding:14px}.toolbar{display:flex;gap:8px;overflow:auto;padding-bottom:6px;margin-bottom:12px}
+.chip{border:none;background:var(--chip);color:var(--brand);padding:10px 12px;border-radius:999px;font-weight:600;white-space:nowrap;cursor:pointer;font-size:12px}.chip.active{background:var(--brand);color:#fff}
+.card,.small-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px;box-shadow:var(--shadow);margin-bottom:14px}
+.card h2,.small-card h3{margin:8px 0 6px}.meta,.muted,.small-card p,.small-card li{color:var(--muted);font-size:13px;line-height:1.6}
+.badge{display:inline-block;background:#eef2ff;color:#4338ca;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700}
+.dayload{display:inline-block;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:800;margin-inline-start:8px}.busy{background:#fef2f2;color:#b91c1c;border:1px solid #fecaca}.medium{background:#fff7ed;color:#c2410c;border:1px solid #fed7aa}.easy{background:#ecfdf5;color:#15803d;border:1px solid #bbf7d0}
+.dayroutebox,.navbox,.parkbox,.foodbox,.notesbox,.linkbox,.dolobox,.oldtownbox{background:#f8fafc;border:1px solid var(--line);border-radius:14px;padding:12px;margin-top:12px}.dolobox{background:#eff6ff;border-color:#bfdbfe}
+.timeline{display:grid;gap:10px;margin-top:8px}.item{display:grid;grid-template-columns:82px 1fr 24px;gap:10px;border-top:1px dashed var(--line);padding-top:10px;align-items:start}.item:first-child{border-top:none;padding-top:0}
+.time{color:var(--brand);font-size:12px;font-weight:800;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px;text-align:center}.item h3{margin:0 0 4px;font-size:15px}.item p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
+.donebox{margin-top:6px}.check{width:20px;height:20px;accent-color:var(--good);margin-top:10px}.done-label{font-size:12px;color:var(--muted);display:block;text-align:center}
+.navlinks{display:grid;gap:10px}.navrow,.foodentry,.oldtownitem{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px}.navlabel,.foodname,.name{font-weight:700;margin-bottom:8px;font-size:14px}.navactions,.foodactions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.navbtn2,.jumplink{display:block;width:100%;padding:10px 8px;border-radius:12px;font-size:13px;font-weight:700;cursor:pointer;text-align:center;border:1px solid;background:#fff}
+.navbtn2.gmaps{background:#eff6ff;color:#1d4ed8;border-color:#bfdbfe}.navbtn2.waze{background:#ecfeff;color:#0f766e;border-color:#99f6e4}.jumplink{background:#faf5ff;color:#7c3aed;border-color:#ddd6fe}
+textarea{width:100%;min-height:86px;border:1px solid var(--line);border-radius:12px;padding:10px;resize:vertical;font:inherit;background:#fff}
+.bottomnav{position:fixed;bottom:0;left:0;right:0;display:flex;justify-content:center;pointer-events:none}.bottomnav-inner{width:min(480px,100%);background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-top:1px solid var(--line);display:flex;justify-content:space-around;padding:10px 8px;pointer-events:auto}.navbtn{background:none;border:none;color:var(--muted);font-weight:700;font-size:12px;cursor:pointer}.navbtn.active{color:var(--brand)}
+.section-title{font-size:16px;margin:18px 2px 10px;color:#0f172a}.hidden{display:none}
+</style>
+
+<style>
+.totalbox{background:#ecfdf5;border:1px solid #bbf7d0;border-radius:14px;padding:12px;margin-bottom:12px}
+.totalbox .sum{font-size:20px;font-weight:800;color:#166534}
+.totalcontrols{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.foodhubentry{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;margin-top:10px}
+.foodhubname{font-weight:700;margin-bottom:8px}
+.foodhubactions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+</style>
+
+
+<style>
+.mealplan{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;margin-top:10px}
+.mealrow{margin:7px 0;font-size:14px;line-height:1.5}
+.mealrow strong{color:var(--text)}
+.superbadge{display:inline-block;background:#eef2ff;color:#4338ca;border-radius:999px;padding:4px 8px;font-size:11px;font-weight:700;margin-bottom:6px}
+</style>
+
+
+<style>
+.distbadge{display:inline-block;border-radius:999px;padding:4px 8px;font-size:11px;font-weight:700;margin-inline-start:6px}
+.walk{background:#ecfdf5;color:#166534;border:1px solid #bbf7d0}
+.drive{background:#fff7ed;color:#9a3412;border:1px solid #fed7aa}
+</style>
+
+
+<style>
+.parknote{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.5}
+.rankbadge{display:inline-block;background:#eef2ff;color:#4338ca;border-radius:999px;padding:3px 7px;font-size:11px;font-weight:700;margin-inline-start:6px}
+</style>
+
+
+<style>
+.mealactions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+</style>
+
+
+<style>
+.dailymealactions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+</style>
+
+
+<style>
+.doloplan{background:#fff;border:1px solid var(--line);border-radius:16px;padding:13px;margin:12px 0;box-shadow:var(--shadow)}
+.doloplan h3{margin:0 0 6px;font-size:17px}
+.doloplan h4{margin:14px 0 7px;font-size:14px;color:#0f172a}
+.doloplan .status{display:inline-block;padding:5px 8px;border-radius:999px;font-size:11px;font-weight:800;margin-inline-end:6px}
+.status.book{background:#fef2f2;color:#b91c1c;border:1px solid #fecaca}
+.status.buy{background:#fff7ed;color:#9a3412;border:1px solid #fed7aa}
+.status.none{background:#ecfdf5;color:#166534;border:1px solid #bbf7d0}
+.dolo-grid{display:grid;gap:8px;margin-top:8px}
+.dolo-line{background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:10px;font-size:13px;line-height:1.55}
+.dolo-steps{margin:7px 0 0;padding-right:20px;color:#334155;font-size:13px;line-height:1.65}
+.official-link{display:inline-block;margin-top:8px;padding:8px 10px;border-radius:10px;background:#f1f5f9;color:#0f172a;text-decoration:none;font-size:12px;font-weight:700;border:1px solid var(--line)}
+.dolo-alert{background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;border-radius:12px;padding:10px;margin-top:10px;font-size:13px;line-height:1.55}
+</style>
+
+
+<style>
+.newparkingbadge{display:inline-block;background:#fff7ed;color:#9a3412;border:1px solid #fdba74;border-radius:999px;padding:4px 8px;font-size:11px;font-weight:800;margin-inline-start:6px}
+.luggageparking{border:2px solid #fdba74!important;background:#fffaf5!important}
+.luggagenote{margin-top:8px;font-size:12px;color:#9a3412;font-weight:700;line-height:1.5}
+</style>
+
+
+<style>
+.dayluggagebox{
+  background:#fffaf5;
+  border:2px solid #fdba74;
+  border-radius:14px;
+  padding:12px;
+  margin-top:12px;
+}
+.dayluggagebox .title{
+  font-weight:800;
+  color:#9a3412;
+  margin-bottom:8px;
+}
+.dayluggageitem{
+  background:#fff;
+  border:1px solid #fed7aa;
+  border-radius:12px;
+  padding:10px;
+  margin-top:8px;
+}
+.dayluggageitem .placename{
+  font-weight:800;
+  font-size:14px;
+}
+.dayluggageitem .desc{
+  font-size:12px;
+  color:#64748b;
+  line-height:1.5;
+  margin-top:5px;
+}
+</style>
+
+</head>
+<body>
+<div class="app">
+  <div class="hero">
+    <h1>טיול משפחתי אופליין – 13/9 עד 28/9</h1>
+    <p>גרסה מלאה ומתוקנת עם כל ימי הטיול, טאב חניות נפרד, וקישור פנימי מכל יום לטאב החניות.</p>
+    <div class="summary">
+      <div class="stat"><strong>16</strong>ימים</div>
+      <div class="stat"><strong>5</strong>לילות דולומיטים</div>
+      <div class="stat"><strong>4</strong>לילות צפון גארדה</div>
+      <div class="stat"><strong>28/9</strong>סיום</div>
+    </div>
+  </div>
+  <div class="content">
+    <section id="days"><div class="toolbar" id="dayFilters"></div><div id="daysContainer"></div></section>
+    <section id="dolomites" class="hidden"><h2 class="section-title">דולומיטים 14–19/9 – תוכנית הפעלה מלאה</h2><div class="muted">כל מה שצריך לדעת במקום אחד: ניווט, חניה, רכבלים, מסלולים, הזמנות מראש וציוד.</div><div id="dolomitesContainer"></div></section>
+<section id="food" class="hidden"><h2 class="section-title">מדריך אוכל לפי אזור</h2><div id="foodContainer"></div></section>
+    <section id="parkinghub" class="hidden"><h2 class="section-title">חניות מחוץ ל-ZTL – מדורג לפי קרבה</h2><div class="muted">כאן מרוכזים חניונים מקובלים מחוץ ל-ZTL, מדורגים מהקרוב/הנוח יותר לפחות קרוב. זמני ההליכה הם הערכות תכנון שימושיות.</div><div class="small-card" id="luggageParkingRecommendations"><h3>חניונים חדשים – ימי מעבר עם מזוודות</h3><div class="luggagenote">נוספו בנוסף לחניונים שכבר קיימים באפליקציה.</div><div class="oldtownitem luggageparking"><div class="name">14/9 · Molveno · Park Molveno – Ischia <span class="newparkingbadge">חדש – מומלץ עם מזוודות</span></div><div class="parknote">מומלץ ביום מעבר עם מזוודות. חניון מסודר באזור האגם.</div><div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Parcheggio%20Ischia%2C%20Molveno%2C%20Trentino%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Parcheggio%20Ischia%2C%20Molveno%2C%20Trentino%2C%20Italy&navigate=yes">Waze</button></div></div><div class="oldtownitem luggageparking"><div class="name">19/9 · Passo Sella · Parking Passo Sella <span class="newparkingbadge">חדש – מומלץ עם מזוודות</span></div><div class="parknote">מומלץ ביום מעבר עם מזוודות. עצירה קצרה; להשאיר תא מטען סגור.</div><div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Parking%20Passo%20Sella%2C%20Selva%20di%20Val%20Gardena%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Parking%20Passo%20Sella%2C%20Selva%20di%20Val%20Gardena%2C%20Italy&navigate=yes">Waze</button></div></div><div class="oldtownitem luggageparking"><div class="name">19/9 · Lago di Carezza · Parcheggio Lago di Carezza <span class="newparkingbadge">חדש – מומלץ עם מזוודות</span></div><div class="parknote">מומלץ ביום מעבר עם מזוודות. חניון מסודר של האגם.</div><div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Parcheggio%20Lago%20di%20Carezza%2C%20Nova%20Levante%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Parcheggio%20Lago%20di%20Carezza%2C%20Nova%20Levante%2C%20Italy&navigate=yes">Waze</button></div></div><div class="oldtownitem luggageparking"><div class="name">19/9 · Cavalese · Parcheggio Piazza Fiera <span class="newparkingbadge">חדש – מומלץ עם מזוודות</span></div><div class="parknote">מומלץ לעצירת קפה/צהריים ביום מעבר.</div><div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Piazza%20Fiera%2C%20Cavalese%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Piazza%20Fiera%2C%20Cavalese%2C%20Italy&navigate=yes">Waze</button></div></div><div class="oldtownitem luggageparking"><div class="name">23/9 · Malcesine · Parcheggio Funivia Malcesine <span class="newparkingbadge">חדש – מומלץ עם מזוודות</span></div><div class="parknote">מומלץ במיוחד ביום מעבר עם מזוודות – חניון מקורה/תת־קרקעי.</div><div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Parcheggio%20Funivia%20Malcesine%2C%20Via%20Navene%20Vecchia%2C%20Malcesine%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Parcheggio%20Funivia%20Malcesine%2C%20Via%20Navene%20Vecchia%2C%20Malcesine%2C%20Italy&navigate=yes">Waze</button></div></div><div class="oldtownitem luggageparking"><div class="name">27/9 · Maranello · Museo Ferrari / Via Fornace Parking <span class="newparkingbadge">חדש – מומלץ עם מזוודות</span></div><div class="parknote">מומלץ ביום מעבר עם מזוודות. חניה מוסדרת ליד המוזיאון.</div><div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Via%20Fornace%2C%20Maranello%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Via%20Fornace%2C%20Maranello%2C%20Italy&navigate=yes">Waze</button></div></div><div class="oldtownitem luggageparking"><div class="name">27/9 · Milano · Duomo Parking – Via Olmetto 9 <span class="newparkingbadge">חדש – מומלץ עם מזוודות</span></div><div class="parknote">מומלץ במיוחד אם נכנסים למילאנו עם המטען – חניון תת־קרקעי.</div><div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Via%20Olmetto%209%2C%20Milano%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Via%20Olmetto%209%2C%20Milano%2C%20Italy&navigate=yes">Waze</button></div></div></div><div id="parkingHubContainer"></div></section>
+    <section id="budget" class="hidden"><h2 class="section-title">תקציב יומי</h2><div id="budgetContainer"></div></section>
+    <section id="packing" class="hidden"><h2 class="section-title">ציוד ואריזה</h2><div id="packingContainer"></div></section>
+    <section id="overview" class="hidden"><h2 class="section-title">תקציר</h2><div class="small-card"><h3>מבנה הטיול</h3><p>13/9–28/9: דסנזאנו → דולומיטים → ריבה/צפון גארדה → דרום גארדה → Ferrari + Milano → Malpensa.</p></div><div class="small-card"><h3>רמות עומס</h3><p>עמוס / בינוני / רגוע מסומנים בכל יום.</p></div></section>
+  </div>
+</div>
+<div class="bottomnav"><div class="bottomnav-inner"><button class="navbtn active" data-tab="days">ימים</button><button class="navbtn" data-tab="dolomites">דולומיטים</button><button class="navbtn" data-tab="food">אוכל</button><button class="navbtn" data-tab="parkinghub">חניות</button><button class="navbtn" data-tab="budget">תקציב</button><button class="navbtn" data-tab="packing">אריזה</button><button class="navbtn" data-tab="overview">תקציר</button></div></div>
+<script>
+const days = [{"day": 1, "date": "13/9", "title": "נחיתה במילאנו → דסנזאנו", "area": "Desenzano", "sleep": "Hotel Europa, Desenzano", "drive": "MXP → דסנזאנו | כ-2 שעות", "load_label": "רגוע", "load_class": "easy", "main_target": {"label": "Hotel Europa", "address": "Hotel Europa, Lungolago Cesare Battisti 71, Desenzano del Garda, Italy"}, "targets": [{"label": "Hotel Europa", "address": "Hotel Europa, Lungolago Cesare Battisti 71, Desenzano del Garda, Italy"}, {"label": "Piazza Malvezzi", "address": "Piazza Malvezzi, Desenzano del Garda, Italy"}], "parkings": [{"name": "Parcheggio Maratona", "address": "Parcheggio Maratona, Via Anelli, 25015 Desenzano del Garda BS, Italy"}], "segments": [{"time": "10:30–15:30", "label": "נחיתה + איסוף רכב", "details": "נחיתה, מזוודות, ביקורת דרכונים ואיסוף רכב."}, {"time": "אחה״צ", "label": "נסיעה לדסנזאנו", "details": "יום קל של התאקלמות, בלי להעמיס יעד נוסף."}, {"time": "ערב", "label": "טיילת וארוחה", "details": "סיבוב בטיילת, גלידה, ארוחה קלה ולינה מוקדמת."}], "food": {"family": "La Goccia Trattoria", "breakfast": "Vivi Cafe", "gelato": "Gelateria Vivaldi", "date": "Ristorante Esplanade", "supermarket": "Esselunga Desenzano"}}, {"day": 2, "date": "14/9", "title": "דסנזאנו → Lago di Molveno → לאיון / אורטיזיי", "area": "Dolomites", "sleep": "Hatzeshof Heustadel, Laion", "drive": "דסנזאנו → Molveno → Laion / Ortisei", "load_label": "בינוני", "load_class": "medium", "main_target": {"label": "Hatzeshof Heustadel", "address": "Tschofas 3, 39040 Laion, Italy"}, "targets": [{"label": "Lago di Molveno", "address": "Lago di Molveno, Molveno TN, Italy"}, {"label": "Molveno Centro", "address": "Molveno, Trentino, Italy"}, {"label": "Hatzeshof Heustadel", "address": "Tschofas 3, 39040 Laion, Italy"}], "parkings": [{"name": "Parcheggio Lago di Molveno", "address": "Parcheggio Lago di Molveno, Molveno TN, Italy"}, {"name": "Hatzeshof Heustadel", "address": "Tschofas 3, 39040 Laion, Italy"}], "segments": [{"time": "08:30–09:00", "label": "יציאה מדסנזאנו", "details": "יציאה צפונה לכיוון Molveno."}, {"time": "~10:30–13:00", "label": "Lago di Molveno", "details": "טיילת/אגם, עצירה של 2–3 שעות וארוחת צהריים רגועה."}, {"time": "13:00 ואילך", "label": "המשך לדולומיטים", "details": "נסיעה ל-Laion / Ortisei והתמקמות בשעות אחר הצהריים."}, {"time": "ערב", "label": "התארגנות", "details": "קניות, ארוחת ערב ובדיקת מזג האוויר ל-Seceda."}], "food": {"family": "Turonda", "breakfast": "Bakery Ortisei", "gelato": "Vanilla Gelateria", "date": "Tubladel", "supermarket": "Despar Ortisei"}}, {"day": 3, "date": "15/9", "title": "Seceda", "area": "Dolomites", "sleep": "Hatzeshof Heustadel, Laion", "drive": "מלון → אורטיזיי", "load_label": "עמוס", "load_class": "busy", "main_target": {"label": "Funivie Seceda", "address": "Funivie Seceda, Ortisei, Italy"}, "targets": [{"label": "Funivie Seceda", "address": "Funivie Seceda, Ortisei, Italy"}], "parkings": [{"name": "Central Parking Ortisei", "address": "Central Parking Ortisei, Italy"}], "hotel_routes": {"title": "המלון → חניה/רכבל Seceda", "note": "הכי נוח: מהמלון ל-Central Parking Ortisei ואז הליכה קצרה לרכבל.", "items": [{"label": "מלון → Central Parking Ortisei", "from": "Tschofas 3, 39040 Laion, Italy", "to": "Central Parking Ortisei, Italy"}, {"label": "Central Parking Ortisei → רכבל Seceda", "from": "Central Parking Ortisei, Italy", "to": "Funivie Seceda, Ortisei, Italy"}]}, "segments": [{"time": "בוקר מוקדם", "label": "Ortisei → Seceda", "details": "עלייה ברכבלים Ortisei → Furnes → Seceda."}, {"time": "בוקר–צהריים", "label": "Ridgeline + Pieralongia", "details": "מסלול הנוף המרכזי, עצירות צילום והליכה קלה/בינונית."}, {"time": "צהריים", "label": "ארוחת בקתה", "details": "עצירה מסודרת על ההר."}, {"time": "אחה״צ", "label": "Fermeda + חזרה", "details": "לפי כוח ומזג אוויר, ואז ירידה חזרה לאורטיזיי."}], "food": {"family": "Turonda", "breakfast": "Bakery Ortisei", "gelato": "—", "date": "Tubladel", "supermarket": "Despar Ortisei"}}, {"day": 4, "date": "16/9", "title": "Alpe di Siusi – יום מלא", "area": "Dolomites", "sleep": "Hatzeshof Heustadel, Laion", "drive": "Laion → Seis → Compatsch", "load_label": "בינוני", "load_class": "medium", "main_target": {"label": "Seiser Alm Cableway", "address": "Schlernstrasse 39, 39040 Seis am Schlern, Italy"}, "targets": [{"label": "Seiser Alm Cableway", "address": "Schlernstrasse 39, 39040 Seis am Schlern, Italy"}, {"label": "Compatsch", "address": "Compatsch, Alpe di Siusi, Italy"}, {"label": "Ritsch-Schwaige", "address": "Ritsch Schwaige, Alpe di Siusi, Italy"}, {"label": "Saltria (אופציונלי)", "address": "Saltria, Alpe di Siusi, Italy"}], "parkings": [{"name": "Seiser Alm Cableway Parking", "address": "Schlernstrasse 39, 39040 Seis am Schlern, Italy"}], "hotel_routes": {"title": "המלון → Seis → Alpe di Siusi", "note": "יום הרים מלא ונפרד, ללא סוסים.", "items": [{"label": "מלון → תחנת Seiser Alm Cableway", "from": "Tschofas 3, 39040 Laion, Italy", "to": "Schlernstrasse 39, 39040 Seis am Schlern, Italy"}, {"label": "תחנת העמק → Compatsch", "from": "Schlernstrasse 39, 39040 Seis am Schlern, Italy", "to": "Compatsch, Alpe di Siusi, Italy"}]}, "segments": [{"time": "08:00–08:30", "label": "הגעה ל-Seis", "details": "חניה ליד תחנת הרכבל ועלייה מוקדמת ל-Compatsch."}, {"time": "בוקר", "label": "Compatsch → Hans & Paula Steger Trail", "details": "הליכה נינוחה על הרמה לכיוון Ritsch."}, {"time": "צהריים", "label": "Ritsch + ארוחת בקתה", "details": "עצירה ארוכה ונינוחה מול הנוף."}, {"time": "אחה״צ", "label": "המשך / Saltria אופציונלי", "details": "אפשר להאריך לפי כוח ומזג אוויר; אחרת חוזרים בנחת ל-Compatsch."}, {"time": "לפני סגירה", "label": "ירידה ל-Seis", "details": "להשאיר מרווח ביטחון ולא להגיע לרכבל האחרון."}], "food": {"family": "Turonda", "breakfast": "Bakery Ortisei", "gelato": "—", "date": "Tubladel", "supermarket": "Despar Ortisei"}}, {"day": 5, "date": "17/9", "title": "רכיבה על סוסים + Terme Merano", "area": "Dolomites", "sleep": "Hatzeshof Heustadel, Laion", "drive": "Laion → Castelrotto → Merano", "load_label": "בינוני", "load_class": "medium", "main_target": {"label": "Terme Merano", "address": "Piazza Terme 9, 39012 Merano, Italy"}, "targets": [{"label": "Maneggio Unterlanzin", "address": "Telfen Lanzin 61A, 39040 Castelrotto, Italy"}, {"label": "Terme Merano", "address": "Piazza Terme 9, 39012 Merano, Italy"}], "parkings": [{"name": "Maneggio Unterlanzin Parking", "address": "Telfen Lanzin 61A, 39040 Castelrotto, Italy"}, {"name": "Parking Terme Merano", "address": "Parking Terme Merano, Merano, Italy"}], "segments": [{"time": "09:00–10:00", "label": "רכיבה על סוסים", "details": "Maneggio Unterlanzin. להזמין מראש."}, {"time": "10:00–12:00", "label": "נסיעה למרנו", "details": "התארגנות ונסיעה רגועה ל-Terme Merano."}, {"time": "צהריים–אחה״צ", "label": "Terme Merano", "details": "מרחצאות, מנוחה וארוחה קלה."}, {"time": "ערב", "label": "חזרה ל-Laion", "details": "יום קל יותר אחרי שני ימי ההרים."}], "food": {"family": "Forsterbrau Meran", "breakfast": "Bakery en route", "gelato": "—", "date": "Restaurant Sigmund", "supermarket": "Despar Ortisei"}}, {"day": 6, "date": "18/9", "title": "ראפטינג – Val di Fiemme", "area": "Dolomites", "sleep": "Hatzeshof Heustadel, Laion", "drive": "לאיון → Val di Fiemme", "load_label": "עמוס", "load_class": "busy", "main_target": {"label": "Avisio Rafting", "address": "Avisio Rafting Val di Fiemme, Italy"}, "targets": [{"label": "Avisio Rafting / Lago di Tesero", "address": "Via Lago, 38038 Tesero TN, Italy"}], "parkings": [{"name": "Avisio Rafting / Lago di Tesero", "address": "Via Lago, 38038 Tesero TN, Italy"}], "segments": [{"time": "בוקר", "label": "נסיעה ל-Lago di Tesero", "details": "להגיע 20–30 דקות לפני השעה שנקבעה."}, {"time": "~3 שעות", "label": "Avisio Rafting", "details": "התארגנות, ציוד, תדריך ושיט."}, {"time": "אחרי הפעילות", "label": "ארוחה קלה", "details": "אוכל ומנוחה לפני החזרה למלון."}, {"time": "אחה״צ", "label": "חזרה ל-Laion", "details": "ערב רגוע."}], "food": {"family": "Turonda", "breakfast": "Coffee on the road", "gelato": "—", "date": "Tubladel", "supermarket": "Despar Ortisei"}}, {"day": 7, "date": "19/9", "title": "דולומיטים → Passo Sella → Lago di Carezza → Cavalese → Riva", "area": "Riva-Limone", "sleep": "Arya Lake Apartment, Riva", "drive": "Laion / Ortisei → Passo Sella → Lago di Carezza → Cavalese → Riva", "load_label": "בינוני", "load_class": "medium", "main_target": {"label": "Arya Lake Apartment", "address": "Via Nino Pernici 14, Riva del Garda, Italy"}, "targets": [{"label": "Passo Sella", "address": "Passo Sella, Dolomites, Italy"}, {"label": "Lago di Carezza", "address": "Lago di Carezza, Nova Levante, Italy"}, {"label": "Cavalese", "address": "Cavalese, Trentino, Italy"}, {"label": "Arya Lake Apartment", "address": "Via Nino Pernici 14, Riva del Garda, Italy"}], "parkings": [{"name": "Passo Sella Parking", "address": "Passo Sella, Dolomites, Italy"}, {"name": "Lago di Carezza Parking", "address": "Parcheggio Lago di Carezza, Nova Levante, Italy"}, {"name": "Cavalese Centro Parking", "address": "Cavalese Centro, Trentino, Italy"}, {"name": "Parcheggio Terme Romane", "address": "Parcheggio Terme Romane, Riva del Garda, Italy"}], "segments": [{"time": "~09:30", "label": "יציאה מהדולומיטים", "details": "יציאה מאזור Ortisei / Laion."}, {"time": "בוקר", "label": "Passo Sella", "details": "עצירת תצפית קצרה."}, {"time": "לפני צהריים", "label": "Lago di Carezza", "details": "הליכה קצרה סביב האגם."}, {"time": "צהריים", "label": "Cavalese", "details": "ארוחת צהריים רגועה."}, {"time": "אחה״צ מוקדם", "label": "המשך ל-Riva", "details": "נסיעה רגועה לצפון אגם גארדה וצ׳ק-אין."}], "food": {"family": "Leon D'Oro", "breakfast": "Quick central cafe", "gelato": "Cristallo Gelateria", "date": "Ristorante alla Torre", "supermarket": "Conad"}}, {"day": 8, "date": "20/9", "title": "Varone + Limone", "area": "Riva-Limone", "sleep": "Arya Lake Apartment, Riva", "drive": "ריבה → Varone → Limone", "load_label": "בינוני", "load_class": "medium", "main_target": {"label": "Limone sul Garda", "address": "Limone sul Garda, Italy"}, "targets": [{"label": "Varone", "address": "Parco Grotta Cascata Varone, Italy"}, {"label": "Limone", "address": "Limone sul Garda, Italy"}], "parkings": [{"name": "Varone Parking", "address": "Parcheggio Cascata Varone, Italy"}, {"name": "Lungolago Limone", "address": "Ingresso Parcheggio Coperto Lungolago Marconi, Via IV Novembre, 25010 Limone sul Garda BS, Italy"}], "segments": [{"time": "בוקר", "label": "Varone", "details": "מפל קצר ונגיש."}, {"time": "צהריים", "label": "Limone", "details": "סמטאות, טיילת וארוחת צהריים."}, {"time": "אחה״צ", "label": "חזרה לריבה", "details": "ערב רגוע."}], "food": {"family": "Leon D'Oro", "breakfast": "Quick central cafe", "gelato": "Cristallo Gelateria", "date": "Senso Limone", "supermarket": "Conad"}}, {"day": 9, "date": "21/9", "title": "Busatte Adventure Park + Torbole", "area": "Riva-Limone", "sleep": "Arya Lake Apartment, Riva", "drive": "ריבה → טורבולה", "load_label": "עמוס", "load_class": "busy", "main_target": {"label": "Busatte Adventure Park", "address": "Busatte Adventure Park, Torbole, Italy"}, "targets": [{"label": "Busatte Adventure Park", "address": "Busatte Adventure Park, Torbole, Italy"}, {"label": "Torbole", "address": "Torbole sul Garda, Italy"}], "parkings": [{"name": "Parcheggio Busatte", "address": "Parcheggio Busatte, Torbole, Italy"}], "segments": [{"time": "בוקר", "label": "פארק חבלים", "details": "יום אקשן מובהק."}, {"time": "צהריים", "label": "טורבולה", "details": "חוף, אוכל והליכה קצרה."}, {"time": "אחה״צ", "label": "חזרה", "details": "ערב בריבה."}], "food": {"family": "Pizzeria Fenice", "breakfast": "Quick central cafe", "gelato": "Cristallo Gelateria", "date": "Senso Limone", "supermarket": "Conad"}}, {"day": 10, "date": "22/9", "title": "Lago di Tenno + Canale di Tenno", "area": "Riva-Limone", "sleep": "Arya Lake Apartment, Riva", "drive": "ריבה → טנו", "load_label": "רגוע", "load_class": "easy", "main_target": {"label": "Lago di Tenno", "address": "Lago di Tenno, Italy"}, "targets": [{"label": "Lago di Tenno", "address": "Lago di Tenno, Italy"}, {"label": "Canale di Tenno", "address": "Canale di Tenno, Italy"}], "parkings": [{"name": "Parcheggio Lago di Tenno", "address": "Parcheggio Lago di Tenno, Italy"}], "segments": [{"time": "בוקר", "label": "אגם טנו", "details": "חצי יום רגוע של טבע ומים."}, {"time": "צהריים", "label": "Canale di Tenno", "details": "כפר קטן ויפה."}, {"time": "אחה״צ", "label": "חזרה", "details": "מנוחה בריבה."}], "food": {"family": "Leon D'Oro", "breakfast": "Quick central cafe", "gelato": "Cristallo Gelateria", "date": "Ristorante alla Torre", "supermarket": "Conad"}}, {"day": 11, "date": "23/9", "title": "ריבה → דרום גארדה / Lazise", "area": "South Garda", "sleep": "אזור Lazise", "drive": "ריבה → Lazise", "load_label": "בינוני", "load_class": "medium", "main_target": {"label": "Lazise", "address": "Lazise, Italy"}, "targets": [{"label": "Malcesine", "address": "Malcesine, Italy"}, {"label": "Lazise", "address": "Lazise, Italy"}], "parkings": [{"name": "Parcheggio Centro Malcesine", "address": "Parcheggio Centro Malcesine, 37018 Malcesine VR, Italy"}, {"name": "Parcheggio Lazise Centro", "address": "Parcheggio Centro Lazise, 37017 Lazise VR, Italy"}], "segments": [{"time": "בוקר", "label": "יציאה דרומה", "details": "נסיעה לאורך הגדה המזרחית."}, {"time": "אמצע היום", "label": "עצירה במלצ׳זינה", "details": "נמל/קפה/שיטוט קצר."}, {"time": "אחה״צ", "label": "Lazise", "details": "צ׳ק אין וסיבוב ערב."}], "food": {"family": "Trattoria da Oreste", "breakfast": "Bakery Lazise", "gelato": "Gelateria Lazise", "date": "Cozzeria Alle Mura", "supermarket": "PAM"}}, {"day": 12, "date": "24/9", "title": "Sirmione + Aquaria", "area": "South Garda", "sleep": "אזור Lazise", "drive": "Lazise → Sirmione", "load_label": "עמוס", "load_class": "busy", "main_target": {"label": "Sirmione", "address": "Sirmione, Italy"}, "targets": [{"label": "Sirmione", "address": "Sirmione, Italy"}, {"label": "Aquaria Thermal SPA", "address": "Aquaria Thermal SPA, Sirmione, Italy"}], "parkings": [{"name": "Piazzale Monte Baldo", "address": "Parcheggio Monte Baldo Sirmione, 25019 Sirmione BS, Italy"}, {"name": "Piazzale Europa", "address": "Grifo Parking Piazzale Europa Sirmione, 25019 Sirmione BS, Italy"}], "segments": [{"time": "בוקר מוקדם", "label": "יציאה לסירמיונה", "details": "מומלץ להגיע מוקדם."}, {"time": "אמצע היום", "label": "עיר עתיקה", "details": "שיטוט, ארוחה וגלידה."}, {"time": "אחה״צ", "label": "Aquaria", "details": "בריכות חמות / ספא."}], "food": {"family": "Il Girasole", "breakfast": "Cafe old town", "gelato": "Gelateria Mancini", "date": "Ristorante Risorgimento", "supermarket": "Carrefour Express"}}, {"day": 13, "date": "25/9", "title": "Verona", "area": "South Garda", "sleep": "אזור Lazise", "drive": "Lazise → Verona", "load_label": "בינוני", "load_class": "medium", "main_target": {"label": "Verona", "address": "Verona, Italy"}, "targets": [{"label": "Arena di Verona", "address": "Arena di Verona, Italy"}, {"label": "Piazza delle Erbe", "address": "Piazza delle Erbe, Verona, Italy"}], "parkings": [{"name": "Parcheggio Cittadella", "address": "Parking Centro Verona Via Campo Marzo, 37122 Verona VR, Italy"}, {"name": "Parcheggio Arena", "address": "Arena Parking Verona, 37122 Verona VR, Italy"}], "segments": [{"time": "בוקר", "label": "נסיעה לורונה", "details": "יום עיר קלאסי."}, {"time": "אמצע היום", "label": "מרכז היסטורי", "details": "Arena, Piazza, קניות ואוכל."}, {"time": "אחה״צ", "label": "חזרה", "details": "ערב רגוע בדרום גארדה."}], "food": {"family": "Osteria da Ugo", "breakfast": "Cafe in center", "gelato": "Gelateria Savoia", "date": "Ristorante Maffei", "supermarket": "Pam Local"}}, {"day": 14, "date": "26/9", "title": "קארטינג / ברדולינו / יום קל", "area": "South Garda", "sleep": "אזור Lazise", "drive": "נסיעות קצרות בדרום", "load_label": "בינוני", "load_class": "medium", "main_target": {"label": "South Garda Karting", "address": "South Garda Karting, Lonato del Garda, Italy"}, "targets": [{"label": "South Garda Karting", "address": "South Garda Karting, Lonato del Garda, Italy"}, {"label": "Bardolino", "address": "Bardolino, Italy"}], "parkings": [{"name": "South Garda Karting Parking", "address": "South Garda Karting, Lonato del Garda, Italy"}, {"name": "Parcheggio Bardolino Centro", "address": "Parcheggio Centro Bardolino, 37011 Bardolino VR, Italy"}], "segments": [{"time": "בוקר", "label": "קארטינג", "details": "אקשן קצר בדרום."}, {"time": "צהריים–אחה״צ", "label": "ברדולינו", "details": "טיילת, אוכל ויום קליל."}], "food": {"family": "La Loggia Rambaldi", "breakfast": "Bakery Lazise", "gelato": "Gelateria Bardolino", "date": "Locanda al Cardellino", "supermarket": "Lidl"}}, {"day": 15, "date": "27/9", "title": "Museo Ferrari + מילאנו + מלפנסה", "area": "Malpensa", "sleep": "First Hotel Malpensa", "drive": "דרום גארדה → Maranello → Milano → MXP", "load_label": "עמוס", "load_class": "busy", "main_target": {"label": "First Hotel Malpensa", "address": "First Hotel Malpensa, Via F. Baracca 34, Case Nuove, Italy"}, "targets": [{"label": "Museo Ferrari", "address": "Museo Ferrari, Maranello, Italy"}, {"label": "Duomo di Milano", "address": "Duomo di Milano, Italy"}, {"label": "First Hotel Malpensa", "address": "First Hotel Malpensa, Via F. Baracca 34, Case Nuove, Italy"}], "parkings": [{"name": "Parcheggio Museo Ferrari", "address": "Museo Ferrari Parking, Via Alfredo Dino Ferrari 43, 41053 Maranello MO, Italy"}, {"name": "Parcheggio Rinascente Duomo", "address": "Parcheggio La Rinascente Duomo, Via Agnello 13, 20121 Milano MI, Italy"}], "segments": [{"time": "בוקר מוקדם", "label": "יציאה למראנלו", "details": "נסיעה לפרארי."}, {"time": "אמצע היום", "label": "Museo Ferrari", "details": "ביקור ממוקד."}, {"time": "אחה״צ", "label": "מילאנו", "details": "כמה שעות בדואומו והגלריה."}, {"time": "ערב", "label": "החזרת רכב + מלון", "details": "לילה ליד השדה."}], "food": {"family": "Casual in Milan", "breakfast": "Coffee on the road", "gelato": "Gelateria near Duomo", "date": "Dinner near Malpensa", "supermarket": "Airport area shop"}}, {"day": 16, "date": "28/9", "title": "מלפנסה → טיסה חזרה", "area": "Malpensa", "sleep": "—", "drive": "מלון → טרמינל", "load_label": "רגוע", "load_class": "easy", "main_target": {"label": "MXP Terminal 1", "address": "Milan Malpensa Airport Terminal 1, Italy"}, "targets": [{"label": "MXP Terminal 1", "address": "Milan Malpensa Airport Terminal 1, Italy"}], "parkings": [{"name": "First Hotel Malpensa", "address": "First Hotel Malpensa, Via F. Baracca 34, Case Nuove, Italy"}], "segments": [{"time": "02:00", "label": "יציאה לשדה", "details": "יציאה מהמלון לטרמינל."}, {"time": "05:00", "label": "טיסה חזרה", "details": "סיום הטיול."}], "food": {"family": "Airport food", "breakfast": "Airport coffee", "gelato": "—", "date": "—", "supermarket": "—"}}];
+const hubs = [
+    {name:'Sirmione – Piazzale Monte Baldo', note:'החניה הראשית המקובלת לכניסה לעיר העתיקה, מחוץ ל-ZTL. הליכה משוערת: 10–15 דק׳ לשער/למרכז ההיסטורי. דירוג: 1.', address:'Parcheggio Monte Baldo Sirmione, 25019 Sirmione BS, Italy'},
+    {name:'Sirmione – Piazzale Europa / Grifo Parking', note:'חלופה קרובה יותר, מתאימה במיוחד לאורחי מלונות במרכז ההיסטורי. הליכה משוערת: 7–10 דק׳. דירוג: 2.', address:'Grifo Parking Piazzale Europa Sirmione, 25019 Sirmione BS, Italy'},
+    {name:'Verona – Parking Tribunale', note:'חניון מוסדר מחוץ ל-ZTL, ובאתר הרשמי מצוין שניתן להגיע ממנו ברגל עד 10 דקות למרכז ההיסטורי ולארנה. דירוג: 1.', address:'Parking Tribunale Verona, 37122 Verona VR, Italy'},
+    {name:'Verona – Parking Centro (Via Campo Marzo)', note:'חניון מוסדר נוסף מחוץ ל-ZTL, ובאתר הרשמי מצוין שגם ממנו הולכים עד 10 דקות למרכז ההיסטורי ולארנה. דירוג: 2.', address:'Parking Centro Verona Via Campo Marzo, 37122 Verona VR, Italy'},
+    {name:'Limone – Parcheggio Lungolago', note:'חניה מומלצת לגישה מהירה למרכז. הליכה משוערת: 3–6 דק׳. דירוג: 1.', address:'Ingresso Parcheggio Coperto Lungolago Marconi, Via IV Novembre, 25010 Limone sul Garda BS, Italy'},
+    {name:'Limone – Multipiano Lungolago', note:'מול Parcheggio Lungolago, עדיין קרוב מאוד למרכז. הליכה משוערת: 4–7 דק׳. דירוג: 2.', address:'Multipiano Lungolago Limone sul Garda, 25010 Limone sul Garda BS, Italy'},
+    {name:'Limone – Multipiano via Caldogno', note:'בכניסה לעיירה, ליד לשכת התיירות. הליכה משוערת: 7–10 דק׳ למרכז. דירוג: 3.', address:'Multipiano via Caldogno Limone sul Garda, 25010 Limone sul Garda BS, Italy'},
+    {name:'Malcesine – Parcheggio Piazza Statuto', note:'חניה מרכזית ונוחה מאוד לביקור במלצ׳זינה. הליכה משוערת: 3–5 דק׳ לנמל/מרכז. דירוג: 1.', address:'Parcheggio Piazza Statuto Malcesine, 37018 Malcesine VR, Italy'},
+    {name:'Malcesine – Parcheggio Paina', note:'חניה נוחה נוספת, מעט רחוקה יותר מהמרכז. הליכה משוערת: 7–10 דק׳. דירוג: 2.', address:'Parcheggio Paina Malcesine, 37018 Malcesine VR, Italy'},
+    {name:'Riva – Rivetta Park & Ride', note:'לא החניה הכי קרובה פיזית למרכז, אבל שירות רשמי ונוח: שאטל למרכז בפחות מ-5 דקות. טוב במיוחד בעומס. דירוג: 1 לשירות שאטל.', address:'Parcheggio Rivetta Park and Ride, Riva del Garda, Italy'},
+    {name:'Desenzano – Parcheggio Maratona', note:'חניה טובה ומקובלת למרכז ולטיילת בדסנזאנו. הליכה משוערת: 5–10 דק׳. דירוג: 1.', address:'Parcheggio Maratona, Via Anelli, 25015 Desenzano del Garda BS, Italy'}
+];
+const budget = [[1, 650, 1100, "יום נחיתה"], [2, 700, 1200, "מעבר לדולומיטים"], [3, 1200, 1800, "Seceda"], [4, 1000, 1600, "Alpe di Siusi"], [5, 900, 1500, "Merano"], [6, 1100, 1700, "ראפטינג"], [7, 700, 1200, "מעבר לריבה"], [8, 850, 1400, "Varone + Limone"], [9, 900, 1500, "Busatte"], [10, 700, 1200, "Tenno"], [11, 700, 1200, "מעבר לדרום"], [12, 1100, 1800, "Sirmione + Aquaria"], [13, 850, 1400, "Verona"], [14, 900, 1500, "Karting / Bardolino"], [15, 1200, 1900, "Ferrari + Milano"], [16, 150, 400, "שדה בלבד"]];
+const packing = [["מסמכים וכסף", ["דרכונים", "רישיון נהיגה + בינלאומי", "אישורי טיסות", "אישור השכרת רכב", "ביטוח נסיעות", "כרטיסי אשראי / אירו", "פרטי מלונות"]], ["רכב ונסיעות", ["מחזיק טלפון", "כבלי טעינה", "מטען לרכב", "מים לדרך", "חטיפים", "מגבונים", "מתאם חשמל"]], ["דולומיטים", ["פליז / סווטשירט", "מעיל קל", "נעלי הליכה", "גרביים חמות", "כובע", "קרם הגנה", "תיק יום", "בקבוקי מים"]], ["אגם גארדה", ["בגדי ים", "כפכפים", "מגבות קלות", "קרם הגנה", "כובע", "ביגוד קל לערב", "תיק לחוף"]], ["אטרקציות", ["בגדים לראפטינג", "נעליים שיכולות להירטב", "מצלמה/GoPro", "ביגוד ספורט", "תרופות", "פלסטרים"]]];
+const STORAGE_KEY_DONE='trip_done_vfull3', STORAGE_KEY_NOTES='trip_notes_vfull3', STORAGE_KEY_PACK='trip_pack_vfull3';
+function getJSON(k){try{return JSON.parse(localStorage.getItem(k)||'{}')}catch(e){return {};}}
+function setJSON(k,v){localStorage.setItem(k,JSON.stringify(v));}
+function gmaps(a){return 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(a);}
+function waze(a){return 'https://www.waze.com/ul?q='+encodeURIComponent(a)+'&navigate=yes';}
+function gmapsDir(a,b){return 'https://www.google.com/maps/dir/'+encodeURIComponent(a)+'/'+encodeURIComponent(b);}
+function openNav(url){window.location.href=url;}
+function switchTab(tab){document.querySelectorAll('.navbtn').forEach(n=>n.classList.toggle('active',n.dataset.tab===tab));['days','dolomites','food','parkinghub','budget','packing','overview'].forEach(id=>document.getElementById(id).classList.toggle('hidden',id!==tab));window.scrollTo({top:0,behavior:'smooth'});}
+function navBlock(label,address){return `<div class="navrow"><div class="navlabel">${label}</div><div class="navactions"><button class="navbtn2 gmaps" data-url="${gmaps(address)}">Google Maps</button><button class="navbtn2 waze" data-url="${waze(address)}">Waze</button></div></div>`;}
+function buildFilters(){const c=document.getElementById('dayFilters');const dayLabels={'1': 'יום א׳ 13/9', '2': 'יום ב׳ 14/9', '3': 'יום ג׳ 15/9', '4': 'יום ד׳ 16/9', '5': 'יום ה׳ 17/9', '6': 'יום ו׳ 18/9', '7': 'שבת 19/9', '8': 'יום א׳ 20/9', '9': 'יום ב׳ 21/9', '10': 'יום ג׳ 22/9', '11': 'יום ד׳ 23/9', '12': 'יום ה׳ 24/9', '13': 'יום ו׳ 25/9', '14': 'שבת 26/9', '15': 'יום א׳ 27/9', '16': 'יום ב׳ 28/9'};const filters=[{key:'all',label:'כל הימים'},...Array.from({length:days.length},(_,i)=>{const key=String(i+1);return {key,label:dayLabels[key]||`יום ${i+1}`};})];filters.forEach(f=>{const b=document.createElement('button');b.className='chip'+(f.key==='all'?' active':'');b.textContent=f.label;b.onclick=()=>{document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.day-card').forEach(card=>card.classList.toggle('hidden',!(f.key==='all'||card.dataset.day===f.key)));};c.appendChild(b);});}
+function renderDays(){const container=document.getElementById('daysContainer');container.innerHTML='';days.forEach(d=>{const segs=d.segments.map((seg,i)=>`<div class="item"><div class="time">${seg.time}</div><div><h3>${seg.label}</h3><p>${seg.details}</p></div><div class="donebox"><input class="check" type="checkbox" data-key="day_${d.day}_seg_${i}" /><span class="done-label">בוצע</span></div></div>`).join('');let dolo='';if(d.hotel_routes){const items=d.hotel_routes.items.map(it=>`<div class="navrow"><div class="navlabel">${it.label}</div><div class="navactions"><button class="navbtn2 gmaps" data-url="${gmapsDir(it.from,it.to)}">Google Maps</button><button class="navbtn2 waze" data-url="${waze(it.to)}">Waze</button></div></div>`).join('');dolo=`<div class="dolobox"><div class="navlabel">${d.hotel_routes.title}</div><div class="muted">${d.hotel_routes.note}</div>${items}</div>`;} const foodEntries=[['משפחה',d.food.family],['בוקר קל',d.food.breakfast],['גלידה',d.food.gelato],['זוגי/ערב',d.food.date]].map(x=>`<div class="foodentry"><div class="foodname"><strong>${x[0]}:</strong> ${x[1]}</div><div class="foodactions"><button class="navbtn2 gmaps" data-url="${gmaps(x[1]+' '+d.area)}">Google Maps</button><button class="navbtn2 waze" data-url="${waze(x[1]+' '+d.area)}">Waze</button></div></div>`).join('');container.insertAdjacentHTML('beforeend',`<div class="card day-card" data-day="${d.day}"><div><span class="badge">יום ${d.day} · ${d.date}</span><span class="dayload ${d.load_class}">${d.load_label}</span></div><h2>${d.title}</h2><div class="meta"><div><strong>אזור:</strong> ${d.area}</div><div><strong>לינה:</strong> ${d.sleep}</div><div><strong>נסיעה:</strong> ${d.drive}</div></div><div class="dayroutebox"><div class="navlabel">ניווט לכל היום / היעד המרכזי</div>${navBlock(d.main_target.label,d.main_target.address)}</div>${dolo}<div class="linkbox"><div class="navlabel">קיצור פנימי</div><button class="jumplink" data-tab-target="parkinghub">לחניות ערים מרכזיות</button></div><div class="timeline">${segs}</div><div class="navbox"><div class="navlabel">יעדים מרכזיים ביום</div><div class="navlinks">${d.targets.map(t=>navBlock(t.label,t.address)).join('')}</div></div><div class="parkbox"><div class="navlabel">חניות ליום זה</div><div class="navlinks">${d.parkings.map(p=>navBlock(p.name,p.address)).join('')}</div></div><div class="foodbox"><div class="navlabel">אוכל לאותו יום / אזור</div>${foodEntries}</div><div class="notesbox"><div class="navlabel">הערות אישיות ליום זה</div><textarea data-note="day_${d.day}" placeholder="למשל: כרטיסים, מזג אוויר, חניה חלופית..."></textarea></div></div>`);});}
+function renderFood(){const g={};days.forEach(d=>g[d.area]=d.food);document.getElementById('foodContainer').innerHTML=Object.entries(g).map(([area,food])=>`<div class="small-card"><h3>${area}</h3><p><strong>משפחה:</strong> ${food.family}</p><p><strong>בוקר קל:</strong> ${food.breakfast}</p><p><strong>גלידה:</strong> ${food.gelato}</p><p><strong>ערב זוגי:</strong> ${food.date}</p><p><strong>סופר:</strong> ${food.supermarket}</p></div>`).join('');}
+function renderParkingHub(){document.getElementById('parkingHubContainer').innerHTML=hubs.map(p=>`<div class="oldtownitem"><div class="name">${p.name}</div><div class="muted">${p.note}</div><div class="navactions"><button class="navbtn2 gmaps" data-url="${gmaps(p.address)}">Google Maps</button><button class="navbtn2 waze" data-url="${waze(p.address)}">Waze</button></div></div>`).join('');}
+function renderBudget(){document.getElementById('budgetContainer').innerHTML='<div class="small-card"><h3>תקציב יומי משוער</h3><p>טווחים לכל המשפחה ליום, כולל אוכל, חניה, דלק יחסי ואטרקציות של אותו יום.</p></div>'+budget.map(x=>`<div class="small-card"><h3>יום ${x[0]}</h3><p><strong>${x[1]}–${x[2]} ₪</strong></p><p>${x[3]}</p></div>`).join('');}
+function renderPacking(){let html='<div class="small-card"><h3>רשימת ציוד ואריזה</h3><p>הסימון נשמר מקומית.</p></div>';packing.forEach((s,si)=>{html+=`<div class="small-card"><h3>${s[0]}</h3>`;s[1].forEach((item,ii)=>{html+=`<label style="display:flex;gap:10px;align-items:flex-start;margin:8px 0;font-size:14px;line-height:1.5;"><input type="checkbox" data-pack="pack_${si}_${ii}" style="margin-top:2px;accent-color:#16a34a;"><span>${item}</span></label>`;});html+='</div>';});document.getElementById('packingContainer').innerHTML=html;}
+function hydrate(){const done=getJSON(STORAGE_KEY_DONE),notes=getJSON(STORAGE_KEY_NOTES),pack=getJSON(STORAGE_KEY_PACK);document.querySelectorAll('.check').forEach(chk=>{chk.checked=!!done[chk.dataset.key];chk.addEventListener('change',()=>{const d=getJSON(STORAGE_KEY_DONE);d[chk.dataset.key]=chk.checked;setJSON(STORAGE_KEY_DONE,d);});});document.querySelectorAll('textarea[data-note]').forEach(area=>{area.value=notes[area.dataset.note]||'';area.addEventListener('input',()=>{const d=getJSON(STORAGE_KEY_NOTES);d[area.dataset.note]=area.value;setJSON(STORAGE_KEY_NOTES,d);});});document.querySelectorAll('input[data-pack]').forEach(chk=>{chk.checked=!!pack[chk.dataset.pack];chk.addEventListener('change',()=>{const d=getJSON(STORAGE_KEY_PACK);d[chk.dataset.pack]=chk.checked;setJSON(STORAGE_KEY_PACK,d);});});document.querySelectorAll('.navbtn2').forEach(btn=>btn.addEventListener('click',()=>openNav(btn.dataset.url)));document.querySelectorAll('.jumplink').forEach(btn=>btn.addEventListener('click',()=>switchTab(btn.dataset.tabTarget)));document.querySelectorAll('.navbtn').forEach(btn=>btn.addEventListener('click',()=>switchTab(btn.dataset.tab)));}
+buildFilters();renderDays();renderFood();renderParkingHub();renderBudget();renderPacking();hydrate();
+</script>
+
+<script>
+(function(){
+  const originalRenderFood = renderFood;
+  renderFood = function(){
+    const g = {};
+    days.forEach(d => g[d.area] = d.food);
+    const container = document.getElementById('foodContainer');
+    container.innerHTML = Object.entries(g).map(([area,food]) => {
+      const items = [
+        ['משפחה', food.family],
+        ['בוקר קל', food.breakfast],
+        ['גלידה', food.gelato],
+        ['ערב זוגי', food.date],
+        ['סופר', food.supermarket]
+      ].filter(x => x[1] && x[1] !== '—').map(([label,value]) => `
+        <div class="foodhubentry">
+          <div class="foodhubname"><strong>${label}:</strong> ${value}</div>
+          <div class="foodhubactions">
+            <button class="navbtn2 gmaps" data-url="${gmaps(value + ' ' + area)}">Google Maps</button>
+            <button class="navbtn2 waze" data-url="${waze(value + ' ' + area)}">Waze</button>
+          </div>
+        </div>
+      `).join('');
+
+      return `
+        <div class="small-card">
+          <h3>${area}</h3>
+          ${items}
+        </div>
+      `;
+    }).join('');
+
+    container.querySelectorAll('.navbtn2').forEach(btn => {
+      btn.addEventListener('click', () => openNav(btn.dataset.url));
+    });
+  };
+
+  const originalRenderBudget = renderBudget;
+  renderBudget = function(){
+    const totalMin = budget.reduce((s, x) => s + x[1], 0);
+    const totalMax = budget.reduce((s, x) => s + x[2], 0);
+
+    const controls = `
+      <div class="totalbox">
+        <div>סכום כולל משוער לכל המסלול</div>
+        <div class="sum">${totalMin.toLocaleString()}–${totalMax.toLocaleString()} ₪</div>
+        <div class="muted">מבוסס על סכומי המינימום–מקסימום של כל יום.</div>
+      </div>
+    `;
+
+    document.getElementById('budgetContainer').innerHTML =
+      controls +
+      '<div class="small-card"><h3>תקציב יומי משוער</h3><p>טווחים לכל המשפחה ליום, כולל אוכל, חניה, דלק יחסי ואטרקציות של אותו יום.</p></div>' +
+      budget.map(x => `<div class="small-card"><h3>יום ${x[0]}</h3><p><strong>${x[1]}–${x[2]} ₪</strong></p><p>${x[3]}</p></div>`).join('');
+  };
+
+  // rerender updated tabs
+  renderFood();
+  renderBudget();
+})();
+</script>
+
+
+<script>
+(function(){
+  const areaProfiles = {"Desenzano": {"hotel_breakfast": "Hotel Europa – לבדוק אם ארוחת הבוקר כלולה בהזמנה; אם כן זו אופציית הבוקר הנוחה ביותר.", "breakfast_near": "Vivi Cafe / מאפייה לאורך הטיילת", "snack_am": "מינימרקט ליד המלון או מאפייה מקומית", "lunch_default": "יום מעבר/נחיתה: לרוב לא נדרש צהריים מלא, או לאכול בדרך", "snack_pm": "גלידה/מאפה בטיילת", "dinner": "מסעדה במרכז או על הטיילת", "gelato": "Gelateria Vivaldi", "super_close": "מינימרקט ליד המלון / Esselunga Express להשלמות", "super_big": "Esselunga Desenzano לקנייה רצינית"}, "Dolomites": {"hotel_breakfast": "Hatzeshof Heustadel – לבדוק אם בחרתם סלסילת/ארוחת בוקר; אם כן זו אופציה מצוינת לבוקר.", "breakfast_near": "Bakery Ortisei / קפה במרכז אורטיזיי", "snack_am": "לקחת מהמלון/מהסופר: כריכים, פירות, חטיפים", "lunch_default": "לרוב מומלץ בקתה/מסעדת הרים ביום רכבלים, או אוכל ארוז בימי נסיעה/אקשן", "snack_pm": "מאפה/קפה/שוקו בכפר אחרי החזרה", "dinner": "אורטיזיי/סנטה כריסטינה", "gelato": "גלידריה בכפר אחרי החזרה מהמסלול", "super_close": "Despar Laion להשלמות מהירות", "super_big": "Despar Ortisei לקנייה רצינית של אוכל, שתייה, ממתקים ותבלינים"}, "Riva-Limone": {"hotel_breakfast": "Arya Lake Apartment – אין ודאות לארוחת בוקר כלולה; בפועל עדיף להתבסס על קניות לדירה או על בית קפה קרוב.", "breakfast_near": "Quick central cafe / מאפייה במרכז ריבה", "snack_am": "לקחת מהדירה: כריכים, פירות, חטיפים", "lunch_default": "ברוב הימים: לאכול באזור היעד (Limone / Torbole / Tenno) או לארוז מהדירה", "snack_pm": "קפה/מאפה/גלידה אחרי החזרה לריבה", "dinner": "ריבה דל גארדה – מרכז/טיילת", "gelato": "Cristallo Gelateria", "super_close": "Coop Piazzale Mimosa להשלמות קרובות יותר", "super_big": "Coop Blue Garden לקנייה רצינית למשפחה"}, "South Garda": {"hotel_breakfast": "אם יש ארוחת בוקר במלון/דירה – לקחת אותה כאופציה נוחה; אחרת מאפייה/קפה ב-Lazise.", "breakfast_near": "Bakery Lazise / קפה במרכז", "snack_am": "לקחת מים, חטיפים ופירות מהרכב/מהמלון", "lunch_default": "לפי יום: בסירמיונה/ורונה/ברדולינו עדיף לאכול בחוץ, או להכין מראש אם רוצים לחסוך", "snack_pm": "גלידה/קפה במהלך השיטוט", "dinner": "Lazise / Bardolino / ורונה לפי היום", "gelato": "גלידריה במרכז Lazise/Bardolino", "super_close": "PAM / Carrefour local להשלמות", "super_big": "Lidl / PAM גדול לקנייה רצינית"}, "Malpensa": {"hotel_breakfast": "First Hotel Malpensa – לבדוק אם ארוחת הבוקר כלולה; אם כן זו האופציה הכי נוחה לפני הטיסה.", "breakfast_near": "Airport coffee / קפה במלון", "snack_am": "נשנושים קלים מהדרך/מהשדה", "lunch_default": "ביום האחרון אין צורך בארוחה מלאה; ביום 27 אפשר לאכול במילאנו", "snack_pm": "קפה/נשנוש קל", "dinner": "Dinner near Malpensa / מסעדת המלון", "gelato": "לפי הדרך / מילאנו", "super_close": "חנות נוחות/שדה להשלמות קטנות", "super_big": "אין צורך מהותי לקנייה גדולה בלילה האחרון"}};
+  const dailyLunch = {"1": "אין צורך לתכנן צהריים מלא; אפשר לאכול משהו קל בדרך או אחרי הצ׳ק-אין.", "2": "צהריים קל בריבה או אוכל שהבאתם לדרך; ערב כבר באזור אורטיזיי.", "3": "מומלץ צהריים בבקתה על Seceda.", "4": "מומלץ צהריים קל על Alpe di Siusi או אוכל ארוז.", "5": "מומלץ צהריים קל במרנו, סמוך למרחצאות.", "6": "או ארוחה פשוטה ליד הראפטינג, או כריכים/נשנושים שהכנתם מראש.", "7": "צהריים קל בדרך לירידה, ערב בריבה.", "8": "מומלץ צהריים בלימונה.", "9": "מומלץ צהריים בטורבולה אחרי Busatte.", "10": "אפשר כריכים/פיקניק ליד טנו או מסעדה קלה באזור.", "11": "מומלץ לעצור במלצ׳זינה לצהריים קל.", "12": "מומלץ לאכול בעיר העתיקה של סירמיונה.", "13": "מומלץ לאכול בורונה לפי המסלול במרכז.", "14": "אפשר לאכול בברדולינו או לקחת משהו קל ליום גמיש.", "15": "מומלץ לאכול במראנלו או במילאנו, תלוי בקצב היום.", "16": "אין צורך בצהריים; זה יום טיסה."};
+
+  const originalRenderFood = renderFood;
+  renderFood = function(){
+    const container = document.getElementById('foodContainer');
+    container.innerHTML = '';
+    const seen = new Set();
+    days.forEach(d => {
+      if (seen.has(d.area)) return;
+      seen.add(d.area);
+      const p = areaProfiles[d.area] || {};
+      const card = document.createElement('div');
+      card.className = 'small-card';
+      card.innerHTML = `
+        <h3>${d.area}</h3>
+        <div class="mealplan">
+          <div class="mealrow"><strong>אופציית בוקר במלון:</strong> ${p.hotel_breakfast || '—'}</div>
+          <div class="mealrow"><strong>מאפייה/קפה קרובים:</strong> ${p.breakfast_near || '—'}</div>
+          <div class="mealrow"><strong>נשנוש בוקר:</strong> ${p.snack_am || '—'}</div>
+          <div class="mealrow"><strong>צהריים:</strong> ${p.lunch_default || '—'}</div>
+          <div class="mealrow"><strong>נשנוש אחה״צ:</strong> ${p.snack_pm || '—'}</div>
+          <div class="mealrow"><strong>ערב:</strong> ${p.dinner || '—'}</div>
+          <div class="mealrow"><strong>גלידה:</strong> ${p.gelato || '—'}</div>
+        </div>
+
+        <div class="foodhubentry">
+          <div class="superbadge">סופר קרוב להשלמות</div>
+          <div class="foodhubname">${p.super_close || '—'}</div>
+          <div class="foodhubactions">
+            <button class="navbtn2 gmaps" data-url="${gmaps((p.super_close || '') + ' ' + d.area)}">Google Maps</button>
+            <button class="navbtn2 waze" data-url="${waze((p.super_close || '') + ' ' + d.area)}">Waze</button>
+          </div>
+        </div>
+
+        <div class="foodhubentry">
+          <div class="superbadge">סופר גדול לקנייה רצינית</div>
+          <div class="foodhubname">${p.super_big || '—'}</div>
+          <div class="foodhubactions">
+            <button class="navbtn2 gmaps" data-url="${gmaps((p.super_big || '') + ' ' + d.area)}">Google Maps</button>
+            <button class="navbtn2 waze" data-url="${waze((p.super_big || '') + ' ' + d.area)}">Waze</button>
+          </div>
+        </div>
+
+        <div class="foodhubentry">
+          <div class="foodhubname"><strong>מסעדה משפחתית:</strong> ${d.food.family}</div>
+          <div class="foodhubactions">
+            <button class="navbtn2 gmaps" data-url="${gmaps(d.food.family + ' ' + d.area)}">Google Maps</button>
+            <button class="navbtn2 waze" data-url="${waze(d.food.family + ' ' + d.area)}">Waze</button>
+          </div>
+        </div>
+
+        <div class="foodhubentry">
+          <div class="foodhubname"><strong>בוקר/קפה:</strong> ${d.food.breakfast}</div>
+          <div class="foodhubactions">
+            <button class="navbtn2 gmaps" data-url="${gmaps(d.food.breakfast + ' ' + d.area)}">Google Maps</button>
+            <button class="navbtn2 waze" data-url="${waze(d.food.breakfast + ' ' + d.area)}">Waze</button>
+          </div>
+        </div>
+
+        <div class="foodhubentry">
+          <div class="foodhubname"><strong>גלידה:</strong> ${d.food.gelato}</div>
+          <div class="foodhubactions">
+            <button class="navbtn2 gmaps" data-url="${gmaps(d.food.gelato + ' ' + d.area)}">Google Maps</button>
+            <button class="navbtn2 waze" data-url="${waze(d.food.gelato + ' ' + d.area)}">Waze</button>
+          </div>
+        </div>
+
+        <div class="foodhubentry">
+          <div class="foodhubname"><strong>ערב/זוגי:</strong> ${d.food.date}</div>
+          <div class="foodhubactions">
+            <button class="navbtn2 gmaps" data-url="${gmaps(d.food.date + ' ' + d.area)}">Google Maps</button>
+            <button class="navbtn2 waze" data-url="${waze(d.food.date + ' ' + d.area)}">Waze</button>
+          </div>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+    container.querySelectorAll('.navbtn2').forEach(btn => btn.addEventListener('click', () => openNav(btn.dataset.url)));
+  };
+
+  const originalRenderDays = renderDays;
+  renderDays = function(){
+    originalRenderDays();
+    document.querySelectorAll('.day-card').forEach(card => {
+      const day = Number(card.dataset.day);
+      const dayData = days.find(d => d.day === day);
+      if (!dayData) return;
+      const p = areaProfiles[dayData.area] || {};
+      const foodBox = card.querySelector('.foodbox');
+      if (!foodBox) return;
+
+      foodBox.innerHTML = `
+        <div class="navlabel">אוכל לאותו יום / אזור</div>
+
+        <div class="mealplan">
+          <div class="mealrow"><strong>בוקר – אופציית מלון:</strong> ${p.hotel_breakfast || '—'}</div>
+          <div class="mealrow"><strong>בוקר – מאפייה/קפה:</strong> ${p.breakfast_near || '—'}</div>
+          <div class="mealrow"><strong>נשנוש בוקר:</strong> ${p.snack_am || '—'}</div>
+          <div class="mealrow"><strong>צהריים ליום זה:</strong> ${dailyLunch[day] || p.lunch_default || '—'}</div>
+          <div class="mealrow"><strong>נשנוש אחה״צ:</strong> ${p.snack_pm || '—'}</div>
+          <div class="mealrow"><strong>ערב:</strong> ${p.dinner || '—'}</div>
+          <div class="mealrow"><strong>גלידה:</strong> ${p.gelato || '—'}</div>
+        </div>
+
+        <div class="foodentry">
+          <div class="superbadge">סופר קרוב להשלמות</div>
+          <div class="foodname">${p.super_close || '—'}</div>
+          <div class="foodactions">
+            <button class="navbtn2 gmaps" data-url="${gmaps((p.super_close || '') + ' ' + dayData.area)}">Google Maps</button>
+            <button class="navbtn2 waze" data-url="${waze((p.super_close || '') + ' ' + dayData.area)}">Waze</button>
+          </div>
+        </div>
+
+        <div class="foodentry">
+          <div class="superbadge">סופר גדול לקנייה רצינית</div>
+          <div class="foodname">${p.super_big || '—'}</div>
+          <div class="foodactions">
+            <button class="navbtn2 gmaps" data-url="${gmaps((p.super_big || '') + ' ' + dayData.area)}">Google Maps</button>
+            <button class="navbtn2 waze" data-url="${waze((p.super_big || '') + ' ' + dayData.area)}">Waze</button>
+          </div>
+        </div>
+      `;
+    });
+    document.querySelectorAll('.foodbox .navbtn2').forEach(btn => btn.addEventListener('click', () => openNav(btn.dataset.url)));
+  };
+
+  renderDays();
+  renderFood();
+})();
+</script>
+
+
+<script>
+(function(){
+  const areaDistanceHints = {
+    "Desenzano": {
+      super_close: {label:"ברגל", cls:"walk"},
+      super_big: {label:"נסיעה קצרה", cls:"drive"},
+      breakfast_near: {label:"ברגל", cls:"walk"},
+      dinner: {label:"ברגל", cls:"walk"},
+      gelato: {label:"ברגל", cls:"walk"}
+    },
+    "Dolomites": {
+      super_close: {label:"נסיעה קצרה", cls:"drive"},
+      super_big: {label:"נסיעה קצרה", cls:"drive"},
+      breakfast_near: {label:"נסיעה קצרה", cls:"drive"},
+      dinner: {label:"נסיעה קצרה", cls:"drive"},
+      gelato: {label:"נסיעה קצרה", cls:"drive"}
+    },
+    "Riva-Limone": {
+      super_close: {label:"ברגל / קצר מאוד", cls:"walk"},
+      super_big: {label:"נסיעה קצרה", cls:"drive"},
+      breakfast_near: {label:"ברגל", cls:"walk"},
+      dinner: {label:"ברגל", cls:"walk"},
+      gelato: {label:"ברגל", cls:"walk"}
+    },
+    "South Garda": {
+      super_close: {label:"ברגל / קצר", cls:"walk"},
+      super_big: {label:"נסיעה קצרה", cls:"drive"},
+      breakfast_near: {label:"ברגל / קצר", cls:"walk"},
+      dinner: {label:"ברגל / קצר", cls:"walk"},
+      gelato: {label:"ברגל / קצר", cls:"walk"}
+    },
+    "Malpensa": {
+      super_close: {label:"קצר", cls:"walk"},
+      super_big: {label:"לא רלוונטי", cls:"drive"},
+      breakfast_near: {label:"במלון / קצר", cls:"walk"},
+      dinner: {label:"במלון / קצר", cls:"walk"},
+      gelato: {label:"לא רלוונטי", cls:"drive"}
+    }
+  };
+
+  function badgeHtml(obj){
+    if (!obj) return '';
+    return `<span class="distbadge ${obj.cls}">${obj.label}</span>`;
+  }
+
+  const originalRenderFood2 = renderFood;
+  renderFood = function(){
+    originalRenderFood2();
+    const cards = document.querySelectorAll('#foodContainer .small-card');
+    cards.forEach(card => {
+      const area = card.querySelector('h3')?.textContent?.trim();
+      const hints = areaDistanceHints[area] || {};
+      card.querySelectorAll('.foodhubentry').forEach(entry => {
+        const text = entry.textContent || '';
+        const name = entry.querySelector('.foodhubname');
+        if (!name) return;
+        let hint = null;
+        if (text.includes('סופר קרוב להשלמות')) hint = hints.super_close;
+        else if (text.includes('סופר גדול לקנייה רצינית')) hint = hints.super_big;
+        else if (text.includes('בוקר') || text.includes('Cafe') || text.includes('Bakery')) hint = hints.breakfast_near;
+        else if (text.includes('גלידה') || text.includes('Gelateria')) hint = hints.gelato;
+        else if (text.includes('ערב') || text.includes('Ristorante') || text.includes('Trattoria')) hint = hints.dinner;
+        if (hint) name.insertAdjacentHTML('beforeend', badgeHtml(hint));
+      });
+    });
+  };
+
+  const originalRenderDays2 = renderDays;
+  renderDays = function(){
+    originalRenderDays2();
+    document.querySelectorAll('.day-card').forEach(card => {
+      const meta = card.querySelector('.meta');
+      const metaText = meta ? meta.textContent : '';
+      let area = '';
+      if (metaText.includes('Desenzano')) area = 'Desenzano';
+      else if (metaText.includes('Dolomites')) area = 'Dolomites';
+      else if (metaText.includes('Riva-Limone')) area = 'Riva-Limone';
+      else if (metaText.includes('South Garda')) area = 'South Garda';
+      else if (metaText.includes('Malpensa')) area = 'Malpensa';
+      const hints = areaDistanceHints[area] || {};
+
+      card.querySelectorAll('.foodentry').forEach(entry => {
+        const name = entry.querySelector('.foodname');
+        if (!name) return;
+        const text = name.textContent || '';
+        let hint = null;
+        if (text.includes('סופר קרוב')) hint = hints.super_close;
+        else if (text.includes('סופר גדול')) hint = hints.super_big;
+        else if (text.includes('בוקר')) hint = hints.breakfast_near;
+        else if (text.includes('גלידה')) hint = hints.gelato;
+        else if (text.includes('ערב')) hint = hints.dinner;
+        if (hint) name.insertAdjacentHTML('beforeend', badgeHtml(hint));
+      });
+
+      const mealPlan = card.querySelector('.mealplan');
+      if (mealPlan && !mealPlan.querySelector('.distlegend')) {
+        const legend = document.createElement('div');
+        legend.className = 'mealrow distlegend';
+        legend.innerHTML = '<strong>נוחות מהמקום:</strong> <span class="distbadge walk">ברגל / קרוב</span> <span class="distbadge drive">נסיעה קצרה</span>';
+        mealPlan.prepend(legend);
+      }
+    });
+  };
+
+  renderDays();
+  renderFood();
+})();
+</script>
+
+
+<script>
+(function(){
+  const areaDistanceHintsDetailed = {
+    "Desenzano": {
+      super_close: {label:"5–10 דק׳ הליכה", cls:"walk"},
+      super_big: {label:"5–10 דק׳ נסיעה", cls:"drive"},
+      breakfast_near: {label:"5–10 דק׳ הליכה", cls:"walk"},
+      dinner: {label:"5–10 דק׳ הליכה", cls:"walk"},
+      gelato: {label:"5–10 דק׳ הליכה", cls:"walk"}
+    },
+    "Dolomites": {
+      super_close: {label:"5–10 דק׳ נסיעה", cls:"drive"},
+      super_big: {label:"10–20 דק׳ נסיעה", cls:"drive"},
+      breakfast_near: {label:"5–15 דק׳ נסיעה", cls:"drive"},
+      dinner: {label:"5–15 דק׳ נסיעה", cls:"drive"},
+      gelato: {label:"5–15 דק׳ נסיעה", cls:"drive"}
+    },
+    "Riva-Limone": {
+      super_close: {label:"5–10 דק׳ הליכה", cls:"walk"},
+      super_big: {label:"5–10 דק׳ נסיעה", cls:"drive"},
+      breakfast_near: {label:"5–10 דק׳ הליכה", cls:"walk"},
+      dinner: {label:"5–10 דק׳ הליכה", cls:"walk"},
+      gelato: {label:"5–10 דק׳ הליכה", cls:"walk"}
+    },
+    "South Garda": {
+      super_close: {label:"5–10 דק׳ הליכה / קצר", cls:"walk"},
+      super_big: {label:"5–15 דק׳ נסיעה", cls:"drive"},
+      breakfast_near: {label:"5–10 דק׳ הליכה", cls:"walk"},
+      dinner: {label:"5–10 דק׳ הליכה / קצר", cls:"walk"},
+      gelato: {label:"5–10 דק׳ הליכה / קצר", cls:"walk"}
+    },
+    "Malpensa": {
+      super_close: {label:"5 דק׳ הליכה / קצר", cls:"walk"},
+      super_big: {label:"מצריך רכב", cls:"drive"},
+      breakfast_near: {label:"במלון / קצר מאוד", cls:"walk"},
+      dinner: {label:"במלון / קצר מאוד", cls:"walk"},
+      gelato: {label:"לא רלוונטי", cls:"drive"}
+    }
+  };
+
+  function badgeHtmlDetailed(obj){
+    if (!obj) return '';
+    return `<span class="distbadge ${obj.cls}">${obj.label}</span>`;
+  }
+
+  function applyDetailedBadges(){
+    document.querySelectorAll('.day-card').forEach(card => {
+      const meta = card.querySelector('.meta');
+      const metaText = meta ? meta.textContent : '';
+      let area = '';
+      if (metaText.includes('Desenzano')) area = 'Desenzano';
+      else if (metaText.includes('Dolomites')) area = 'Dolomites';
+      else if (metaText.includes('Riva-Limone')) area = 'Riva-Limone';
+      else if (metaText.includes('South Garda')) area = 'South Garda';
+      else if (metaText.includes('Malpensa')) area = 'Malpensa';
+      const hints = areaDistanceHintsDetailed[area] || {};
+
+      card.querySelectorAll('.distbadge').forEach(b => b.remove());
+
+      card.querySelectorAll('.foodentry').forEach(entry => {
+        const name = entry.querySelector('.foodname');
+        if (!name) return;
+        const text = name.textContent || '';
+        let hint = null;
+        if (text.includes('סופר קרוב')) hint = hints.super_close;
+        else if (text.includes('סופר גדול')) hint = hints.super_big;
+        else if (text.includes('בוקר')) hint = hints.breakfast_near;
+        else if (text.includes('גלידה')) hint = hints.gelato;
+        else if (text.includes('ערב')) hint = hints.dinner;
+        if (hint) name.insertAdjacentHTML('beforeend', badgeHtmlDetailed(hint));
+      });
+
+      const mealPlan = card.querySelector('.mealplan');
+      if (mealPlan) {
+        const legend = mealPlan.querySelector('.distlegend');
+        if (legend) {
+          legend.innerHTML = '<strong>נוחות מהמקום:</strong> <span class="distbadge walk">5–10 דק׳ הליכה</span> <span class="distbadge drive">10–15 דק׳ נסיעה / מצריך רכב</span>';
+        }
+      }
+    });
+
+    document.querySelectorAll('#foodContainer .small-card').forEach(card => {
+      const area = card.querySelector('h3')?.textContent?.trim();
+      const hints = areaDistanceHintsDetailed[area] || {};
+      card.querySelectorAll('.distbadge').forEach(b => b.remove());
+      card.querySelectorAll('.foodhubentry').forEach(entry => {
+        const text = entry.textContent || '';
+        const name = entry.querySelector('.foodhubname');
+        if (!name) return;
+        let hint = null;
+        if (text.includes('סופר קרוב להשלמות')) hint = hints.super_close;
+        else if (text.includes('סופר גדול לקנייה רצינית')) hint = hints.super_big;
+        else if (text.includes('בוקר') || text.includes('Cafe') || text.includes('Bakery')) hint = hints.breakfast_near;
+        else if (text.includes('גלידה') || text.includes('Gelateria')) hint = hints.gelato;
+        else if (text.includes('ערב') || text.includes('Ristorante') || text.includes('Trattoria')) hint = hints.dinner;
+        if (hint) name.insertAdjacentHTML('beforeend', badgeHtmlDetailed(hint));
+      });
+    });
+  }
+
+  applyDetailedBadges();
+})();
+</script>
+
+
+<script>
+(function(){
+  // Stable delegated handlers for all dynamic buttons/links
+  function safeOpen(url){
+    if (!url) return;
+    try {
+      window.location.assign(url);
+    } catch (e) {
+      window.location.href = url;
+    }
+  }
+
+  document.addEventListener('click', function(e){
+    const navBtn2 = e.target.closest('.navbtn2');
+    if (navBtn2) {
+      e.preventDefault();
+      e.stopPropagation();
+      safeOpen(navBtn2.dataset.url);
+      return;
+    }
+
+    const jumpLink = e.target.closest('.jumplink');
+    if (jumpLink) {
+      e.preventDefault();
+      e.stopPropagation();
+      const target = jumpLink.dataset.tabTarget || 'parkinghub';
+      if (typeof switchTab === 'function') {
+        switchTab(target);
+      } else {
+        document.querySelectorAll('.navbtn').forEach(n => n.classList.toggle('active', n.dataset.tab === target));
+        ['days','dolomites','food','parkinghub','budget','packing','overview'].forEach(id => {
+          const el = document.getElementById(id);
+          if (el) el.classList.toggle('hidden', id !== target);
+        });
+        window.scrollTo({top:0, behavior:'smooth'});
+      }
+      return;
+    }
+
+    const bottomTab = e.target.closest('.navbtn');
+    if (bottomTab) {
+      e.preventDefault();
+      e.stopPropagation();
+      const target = bottomTab.dataset.tab;
+      if (target && typeof switchTab === 'function') {
+        switchTab(target);
+      }
+      return;
+    }
+
+    const dayChip = e.target.closest('.chip');
+    if (dayChip) {
+      // Let the existing onclick keep working if present,
+      // but make sure dynamic chips still respond.
+      const chips = Array.from(document.querySelectorAll('.chip'));
+      const idx = chips.indexOf(dayChip);
+      if (!dayChip.onclick && idx >= 0) {
+        chips.forEach(c => c.classList.remove('active'));
+        dayChip.classList.add('active');
+        const key = idx === 0 ? 'all' : String(idx);
+        document.querySelectorAll('.day-card').forEach(card => {
+          card.classList.toggle('hidden', !(key === 'all' || card.dataset.day === key));
+        });
+      }
+      return;
+    }
+  }, true);
+
+  // Fallback anchors inside nav buttons if Android blocks button handlers
+  document.querySelectorAll('.navbtn2').forEach(btn => {
+    if (btn.dataset.fixed === '1') return;
+    btn.dataset.fixed = '1';
+    btn.setAttribute('type', 'button');
+  });
+
+  document.querySelectorAll('.jumplink').forEach(btn => {
+    if (btn.dataset.fixed === '1') return;
+    btn.dataset.fixed = '1';
+    btn.setAttribute('type', 'button');
+  });
+})();
+</script>
+
+
+<script>
+(function(){
+  const dailyParkingMeta = {
+    1: {
+      "Parcheggio Maratona": {rank:"1", walk:"5–10 דק׳ הליכה", note:"חניה מקובלת ונוחה למרכז ולטיילת של דסנזאנו."}
+    },
+    2: {
+      "Parcheggio Terme Romane": {rank:"1", walk:"5–10 דק׳ הליכה", note:"חניה נוחה לעצירת קפה/טיילת בריבה."},
+      "Central Parking Ortisei": {rank:"1", walk:"5–7 דק׳ הליכה", note:"החניה המקובלת והנוחה ביותר למרכז אורטיזיי ולרכבלים."}
+    },
+    3: {
+      "Central Parking Ortisei": {rank:"1", walk:"5–7 דק׳ הליכה", note:"החניה המקובלת לרכבל Seceda ולמרכז אורטיזיי."}
+    },
+    4: {
+      "Maneggio Unterlanzin Parking": {rank:"1", walk:"0–3 דק׳", note:"חניה צמודה לפעילות הסוסים."},
+      "Seis am Schlern Parking": {rank:"1", walk:"3–6 דק׳ הליכה", note:"החניה הנוחה לרכבל Alpe di Siusi."}
+    },
+    5: {
+      "Thermen Parking Meran": {rank:"1", walk:"2–5 דק׳ הליכה", note:"חניה נוחה מאוד למרחצאות ולמרכז מרנו."}
+    },
+    6: {
+      "Rafting Parking": {rank:"1", walk:"0–3 דק׳", note:"חניה במקום הפעילות."}
+    },
+    7: {
+      "Parcheggio Terme Romane": {rank:"1", walk:"5–10 דק׳ הליכה", note:"נוחה למרכז ריבה אם צריך לעצור לפני/אחרי הצ׳ק-אין."}
+    },
+    8: {
+      "Varone Parking": {rank:"1", walk:"2–5 דק׳", note:"החניה המקובלת למפל Varone."},
+      "Lungolago Limone": {rank:"1", walk:"3–6 דק׳ הליכה", note:"אחת החניות הנוחות ביותר למרכז לימונה, מחוץ ל-ZTL."}
+    },
+    9: {
+      "Parcheggio Busatte": {rank:"1", walk:"3–6 דק׳", note:"חניה נוחה ל-Busatte Adventure Park."}
+    },
+    10: {
+      "Parcheggio Lago di Tenno": {rank:"1", walk:"3–8 דק׳", note:"החניה המקובלת לאגם טנו."}
+    },
+    11: {
+      "Parcheggio Centro Malcesine": {rank:"2", walk:"7–10 דק׳ הליכה", note:"חניה טובה למרכז מלצ׳זינה, מעט רחוקה יותר מ-Piazza Statuto."},
+      "Parcheggio Lazise Centro": {rank:"1", walk:"5–8 דק׳ הליכה", note:"חניה נוחה לעיר העתיקה ולטיילת של Lazise."}
+    },
+    12: {
+      "Piazzale Monte Baldo": {rank:"1", walk:"10–15 דק׳ הליכה", note:"החניה הראשית והמקובלת לעיר העתיקה של סירמיונה, מחוץ ל-ZTL."},
+      "Piazzale Europa": {rank:"2", walk:"7–10 דק׳ הליכה", note:"חלופה קרובה יותר, רלוונטית במיוחד אם מתפנה מקום."}
+    },
+    13: {
+      "Parcheggio Cittadella": {rank:"1", walk:"8–10 דק׳ הליכה", note:"אחת החניות המקובלות והנוחות למרכז ורונה מחוץ ל-ZTL."},
+      "Parcheggio Arena": {rank:"2", walk:"5–8 דק׳ הליכה", note:"קרוב מאוד, אך לעיתים פחות נוח/פנוי. עדיין מתאים למרכז."}
+    },
+    14: {
+      "South Garda Karting Parking": {rank:"1", walk:"0–2 דק׳", note:"חניה צמודה לפעילות."},
+      "Parcheggio Bardolino Centro": {rank:"1", walk:"5–8 דק׳ הליכה", note:"נוחה למרכז ברדולינו ולטיילת."}
+    },
+    15: {
+      "Parcheggio Museo Ferrari": {rank:"1", walk:"2–5 דק׳", note:"חניה ישירה ונוחה למוזיאון פרארי."},
+      "Parcheggio Rinascente Duomo": {rank:"1", walk:"3–6 דק׳ הליכה", note:"חניה מרכזית מאוד לאזור הדואומו במילאנו."}
+    },
+    16: {
+      "First Hotel Malpensa": {rank:"1", walk:"0–3 דק׳ / שאטל קצר", note:"לילה אחרון – מהמלון לשדה לרוב בשאטל/נסיעה קצרה."}
+    }
+  };
+
+  function enhanceDailyParkings(){
+    document.querySelectorAll('.day-card').forEach(card => {
+      const day = Number(card.dataset.day);
+      const map = dailyParkingMeta[day] || {};
+      const parkRows = card.querySelectorAll('.parkbox .navrow');
+      parkRows.forEach(row => {
+        const labelEl = row.querySelector('.navlabel');
+        if (!labelEl) return;
+        const name = labelEl.textContent.trim();
+        const meta = map[name];
+        if (!meta) return;
+
+        row.querySelectorAll('.rankbadge,.distbadge,.parknote').forEach(x => x.remove());
+        labelEl.insertAdjacentHTML('beforeend', ` <span class="rankbadge">דירוג ${meta.rank}</span> <span class="distbadge walk">${meta.walk}</span>`);
+        row.insertAdjacentHTML('beforeend', `<div class="parknote">${meta.note}</div>`);
+      });
+    });
+  }
+
+  enhanceDailyParkings();
+})();
+</script>
+
+
+<script>
+(function(){
+  function normalizeMapUrl(url){
+    if (!url) return url;
+    return url.replace(/%20/g, '+');
+  }
+  document.querySelectorAll('.navbtn2').forEach(btn => {
+    const u = btn.dataset.url;
+    if (u) btn.dataset.url = normalizeMapUrl(u);
+  });
+})();
+</script>
+
+
+<script>
+(function(){
+  window.gmaps = function(a){
+    return 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(a);
+  };
+  window.waze = function(a){
+    return 'https://www.waze.com/ul?q=' + encodeURIComponent(a) + '&navigate=yes';
+  };
+})();
+</script>
+
+
+<script>
+(function(){
+  const areaProfilesLinks = {
+    "Desenzano": {
+      hotel_breakfast: "Hotel Europa, Lungolago Cesare Battisti 71, Desenzano del Garda, Italy",
+      breakfast_near: "Vivi Cafe Desenzano del Garda, Italy",
+      snack_am: "Esselunga Desenzano del Garda, Italy",
+      lunch_default: "Piazza Malvezzi, Desenzano del Garda, Italy",
+      snack_pm: "Gelateria Vivaldi Desenzano del Garda, Italy",
+      dinner: "Ristorante Esplanade Desenzano del Garda, Italy",
+      gelato: "Gelateria Vivaldi Desenzano del Garda, Italy"
+    },
+    "Dolomites": {
+      hotel_breakfast: "Hatzeshof Heustadel, Tschofas 3, 39040 Laion, Italy",
+      breakfast_near: "Bakery Ortisei, Italy",
+      snack_am: "Despar Ortisei, Italy",
+      lunch_default: "Ortisei, Italy",
+      snack_pm: "Ortisei, Italy",
+      dinner: "Ortisei, Italy",
+      gelato: "Ortisei, Italy"
+    },
+    "Riva-Limone": {
+      hotel_breakfast: "Via Nino Pernici 14, Riva del Garda, Italy",
+      breakfast_near: "Riva del Garda centro cafe, Italy",
+      snack_am: "Coop Riva del Garda, Italy",
+      lunch_default: "Riva del Garda, Italy",
+      snack_pm: "Riva del Garda, Italy",
+      dinner: "Riva del Garda centro, Italy",
+      gelato: "Cristallo Gelateria Riva del Garda, Italy"
+    },
+    "South Garda": {
+      hotel_breakfast: "Lazise, Italy",
+      breakfast_near: "Bakery Lazise, Italy",
+      snack_am: "PAM Lazise, Italy",
+      lunch_default: "Lazise, Italy",
+      snack_pm: "Bardolino, Italy",
+      dinner: "Lazise, Italy",
+      gelato: "Gelateria Lazise, Italy"
+    },
+    "Malpensa": {
+      hotel_breakfast: "First Hotel Malpensa, Via F. Baracca 34, Case Nuove, Italy",
+      breakfast_near: "First Hotel Malpensa, Via F. Baracca 34, Case Nuove, Italy",
+      snack_am: "Milan Malpensa Airport Terminal 1, Italy",
+      lunch_default: "Milan, Italy",
+      snack_pm: "Milan, Italy",
+      dinner: "First Hotel Malpensa, Via F. Baracca 34, Case Nuove, Italy",
+      gelato: "Milan, Italy"
+    }
+  };
+
+  function mealActionHtml(address){
+    return `
+      <div class="mealactions">
+        <button class="navbtn2 gmaps" data-url="${gmaps(address)}">Google Maps</button>
+        <button class="navbtn2 waze" data-url="${waze(address)}">Waze</button>
+      </div>
+    `;
+  }
+
+  function enhanceFoodTab(){
+    const cards = document.querySelectorAll('#foodContainer .small-card');
+    cards.forEach(card => {
+      const area = card.querySelector('h3')?.textContent?.trim();
+      const map = areaProfilesLinks[area] || {};
+      const mealPlan = card.querySelector('.mealplan');
+      if (!mealPlan) return;
+
+      const rows = Array.from(mealPlan.querySelectorAll('.mealrow'));
+      rows.forEach(row => {
+        if (row.dataset.linked === '1') return;
+        const text = row.textContent || '';
+        let key = null;
+        if (text.includes('אופציית בוקר במלון')) key = 'hotel_breakfast';
+        else if (text.includes('מאפייה/קפה קרובים')) key = 'breakfast_near';
+        else if (text.includes('נשנוש בוקר')) key = 'snack_am';
+        else if (text.includes('צהריים')) key = 'lunch_default';
+        else if (text.includes('נשנוש אחה')) key = 'snack_pm';
+        else if (text.includes('ערב')) key = 'dinner';
+        else if (text.includes('גלידה')) key = 'gelato';
+        if (!key || !map[key]) return;
+        row.dataset.linked = '1';
+        row.insertAdjacentHTML('beforeend', mealActionHtml(map[key]));
+      });
+    });
+
+    document.querySelectorAll('#foodContainer .mealactions .navbtn2').forEach(btn => {
+      btn.addEventListener('click', () => openNav(btn.dataset.url));
+    });
+  }
+
+  // food tab already rendered; enhance it
+  enhanceFoodTab();
+})();
+</script>
+
+
+<script>
+(function(){
+  const dailyAreaLinks = {
+    "Desenzano": {
+      hotel_breakfast: "Hotel Europa, Lungolago Cesare Battisti 71, Desenzano del Garda, Italy",
+      breakfast_near: "Vivi Cafe Desenzano del Garda, Italy",
+      snack_am: "Esselunga Desenzano del Garda, Italy",
+      lunch_default: "Piazza Malvezzi, Desenzano del Garda, Italy",
+      snack_pm: "Gelateria Vivaldi Desenzano del Garda, Italy",
+      dinner: "Ristorante Esplanade Desenzano del Garda, Italy",
+      gelato: "Gelateria Vivaldi Desenzano del Garda, Italy"
+    },
+    "Dolomites": {
+      hotel_breakfast: "Hatzeshof Heustadel, Tschofas 3, 39040 Laion, Italy",
+      breakfast_near: "Bakery Ortisei, Italy",
+      snack_am: "Despar Ortisei, Italy",
+      lunch_default: "Ortisei, Italy",
+      snack_pm: "Ortisei, Italy",
+      dinner: "Ortisei, Italy",
+      gelato: "Ortisei, Italy"
+    },
+    "Riva-Limone": {
+      hotel_breakfast: "Via Nino Pernici 14, Riva del Garda, Italy",
+      breakfast_near: "Riva del Garda centro cafe, Italy",
+      snack_am: "Coop Riva del Garda, Italy",
+      lunch_default: "Riva del Garda, Italy",
+      snack_pm: "Riva del Garda, Italy",
+      dinner: "Riva del Garda centro, Italy",
+      gelato: "Cristallo Gelateria Riva del Garda, Italy"
+    },
+    "South Garda": {
+      hotel_breakfast: "Lazise, Italy",
+      breakfast_near: "Bakery Lazise, Italy",
+      snack_am: "PAM Lazise, Italy",
+      lunch_default: "Lazise, Italy",
+      snack_pm: "Bardolino, Italy",
+      dinner: "Lazise, Italy",
+      gelato: "Gelateria Lazise, Italy"
+    },
+    "Malpensa": {
+      hotel_breakfast: "First Hotel Malpensa, Via F. Baracca 34, Case Nuove, Italy",
+      breakfast_near: "First Hotel Malpensa, Via F. Baracca 34, Case Nuove, Italy",
+      snack_am: "Milan Malpensa Airport Terminal 1, Italy",
+      lunch_default: "Milan, Italy",
+      snack_pm: "Milan, Italy",
+      dinner: "First Hotel Malpensa, Via F. Baracca 34, Case Nuove, Italy",
+      gelato: "Milan, Italy"
+    }
+  };
+
+  function actionHtml(address){
+    return `
+      <div class="dailymealactions">
+        <button class="navbtn2 gmaps" data-url="${gmaps(address)}">Google Maps</button>
+        <button class="navbtn2 waze" data-url="${waze(address)}">Waze</button>
+      </div>
+    `;
+  }
+
+  function enhanceDailyMealPlans(){
+    document.querySelectorAll('.day-card').forEach(card => {
+      const meta = card.querySelector('.meta');
+      const metaText = meta ? meta.textContent : '';
+      let area = '';
+      if (metaText.includes('Desenzano')) area = 'Desenzano';
+      else if (metaText.includes('Dolomites')) area = 'Dolomites';
+      else if (metaText.includes('Riva-Limone')) area = 'Riva-Limone';
+      else if (metaText.includes('South Garda')) area = 'South Garda';
+      else if (metaText.includes('Malpensa')) area = 'Malpensa';
+
+      const links = dailyAreaLinks[area] || {};
+      const rows = card.querySelectorAll('.foodbox .mealrow');
+      rows.forEach(row => {
+        if (row.dataset.dailylinked === '1') return;
+        const text = row.textContent || '';
+        let key = null;
+        if (text.includes('בוקר – אופציית מלון')) key = 'hotel_breakfast';
+        else if (text.includes('בוקר – מאפייה/קפה')) key = 'breakfast_near';
+        else if (text.includes('נשנוש בוקר')) key = 'snack_am';
+        else if (text.includes('צהריים')) key = 'lunch_default';
+        else if (text.includes('נשנוש אחה')) key = 'snack_pm';
+        else if (text.includes('ערב')) key = 'dinner';
+        else if (text.includes('גלידה')) key = 'gelato';
+        if (!key || !links[key]) return;
+        row.dataset.dailylinked = '1';
+        row.insertAdjacentHTML('beforeend', actionHtml(links[key]));
+      });
+    });
+
+    document.querySelectorAll('.foodbox .dailymealactions .navbtn2').forEach(btn => {
+      btn.addEventListener('click', () => openNav(btn.dataset.url));
+    });
+  }
+
+  enhanceDailyMealPlans();
+})();
+</script>
+
+
+<script>
+(function(){
+  const holder=document.getElementById('dolomitesContainer');
+  if(holder) holder.innerHTML='<div class="doloplan" data-doloday="2">\n<h3>יום ב׳ 14/9 · דסנזאנו → ריבה → Laion</h3><div><span class="status none">אין הזמנה מיוחדת</span></div>\n<div class="dolo-grid"><div class="dolo-line"><strong>יעד סופי:</strong> Hatzeshof Heustadel · Tschöfas/Tschofas 3, Laion<div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Tschofas%203%2C%2039040%20Laion%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Tschofas%203%2C%2039040%20Laion%2C%20Italy&navigate=yes">Waze</button></div></div><div class="dolo-line"><strong>חניה:</strong> במלון. העצירה בריבה היא עצירת מעבר בלבד; אין צורך בכרטיס/רכבל.</div><div class="dolo-line"><strong>מה עושים:</strong> צ׳ק־אאוט → נסיעה לריבה → קפה/טיילת קצרה → המשך ל-Laion → קניות בסיסיות ל-4 הימים הבאים.</div><div class="dolo-line"><strong>מה להכין לערב:</strong> מים, חטיפים, שכבות חמות, נעלי הליכה; לבדוק תחזית Seceda לבוקר הבא.</div></div>\n<h4>סדר ביצוע</h4><ol class="dolo-steps"><li>לא להעמיס אטרקציה נוספת ביום המעבר.</li><li>בערב לוודא שכרטיסי Seceda נרכשו או שהחלטתם לקנות במקום.</li><li>להכין תיק יום קטן ל-Seceda.</li></ol>\n<h4>ניווט מדויק</h4><div class="navrow"><div class="navlabel">Hatzeshof Heustadel</div><div class="navactions"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Tschofas%203%2C%2039040%20Laion%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Tschofas%203%2C%2039040%20Laion%2C%20Italy&navigate=yes">Waze</button></div></div>\n\n</div><div class="doloplan" data-doloday="3">\n<h3>יום ג׳ 15/9 · Seceda</h3><div><span class="status buy">מומלץ לקנות רכבל מראש</span><span class="status none">חניה אינה מוזמנת מראש</span></div>\n<div class="dolo-grid"><div class="dolo-line"><strong>תחנת רכבל:</strong> Funivie Seceda · Via Val d’Anna 2, Ortisei<div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Via%20Val%20d%27Anna%202%2C%2039046%20Ortisei%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Via%20Val%20d%27Anna%202%2C%2039046%20Ortisei%2C%20Italy&navigate=yes">Waze</button></div></div><div class="dolo-line"><strong>חניה מועדפת:</strong> חניון תחנת Seceda עצמה – כ-250 מקומות, חלקם מקורים. אם מלא: חניה במרכז Ortisei והליכה דרך La Curta.</div><div class="dolo-line"><strong>רכבלים:</strong> Ortisei → Furnes (גונדולה) → Furnes → Seceda (רכבל). בירידה עושים אותם בסדר הפוך.</div><div class="dolo-line"><strong>שעות 2026:</strong> Ortisei–Furnes ו-Furnes–Seceda: 08:30–18:00. Fermeda chairlift: 09:30–16:30 עד 20/9.<div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Fermeda%20Chairlift%2C%20Seceda%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Fermeda%20Chairlift%2C%20Seceda%2C%20Italy&navigate=yes">Waze</button></div></div><div class="dolo-line"><strong>מסלול משפחתי:</strong> Seceda top → Ridgeline → Pieralongia → Odles Hut → תחנה תחתונה Fermeda → עלייה ב-Fermeda → כ-10 דק׳ חזרה לתחנת Seceda.<div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Seceda%2C%20Ortisei%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Seceda%2C%20Ortisei%2C%20Italy&navigate=yes">Waze</button></div><div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Seceda%20Ridgeline%2C%20Ortisei%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Seceda%20Ridgeline%2C%20Ortisei%2C%20Italy&navigate=yes">Waze</button></div><div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Pieralongia%2C%20Seceda%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Pieralongia%2C%20Seceda%2C%20Italy&navigate=yes">Waze</button></div><div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Baita%20Odles%2C%20Seceda%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Baita%20Odles%2C%20Seceda%2C%20Italy&navigate=yes">Waze</button></div><div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Fermeda%20Chairlift%2C%20Seceda%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Fermeda%20Chairlift%2C%20Seceda%2C%20Italy&navigate=yes">Waze</button></div></div><div class="dolo-line"><strong>אורך/זמן:</strong> 5.8 ק״מ, האתר הרשמי מגדיר כ-1.5 שעות הליכה נטו; למשפחה עם תמונות + ארוחה: 4–5 שעות על ההר.</div><div class="dolo-line"><strong>כרטיס:</strong> עדיף Seceda Premium אם רוצים לכלול את Fermeda במסלול. Dolomiti SuperSummer אינו מתקבל ברכבלי Seceda.<div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Fermeda%20Chairlift%2C%20Seceda%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Fermeda%20Chairlift%2C%20Seceda%2C%20Italy&navigate=yes">Waze</button></div></div></div>\n<h4>סדר ביצוע</h4><ol class="dolo-steps"><li>להגיע סביב 08:15–08:30.</li><li>לעלות עד Seceda ולא לעצור ב-Furnes.</li><li>קודם ללכת לנקודת הרכס; אחר כך Pieralongia.</li><li>ארוחת צהריים ב-Odles/Pieralongia לפי הקצב.</li><li>לא להגיע ל-Fermeda מאוחר; הוא נסגר מוקדם מהרכבלים הראשיים.</li><li>בירידה לחזור לאורטיזיי באותם שני רכבלים.</li></ol>\n<h4>ניווט מדויק</h4><div class="navrow"><div class="navlabel">Funivie Seceda</div><div class="navactions"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Via%20Val%20d%27Anna%202%2C%2039046%20Ortisei%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Via%20Val%20d%27Anna%202%2C%2039046%20Ortisei%2C%20Italy&navigate=yes">Waze</button></div></div>\n<a class="official-link" href="https://www.seceda.it/en/summer" target="_blank" rel="noopener">האתר הרשמי – Seceda</a> <a class="official-link" href="https://www.seceda.it/en/hiking" target="_blank" rel="noopener">מסלול ההליכה הרשמי</a> <a class="official-link" href="https://www.seceda.it/en/tickets" target="_blank" rel="noopener">כרטיסים רשמיים</a> \n</div><div class="doloplan" data-doloday="4">\n<h3>יום ד׳ 16/9 · סוסים + Alpe di Siusi</h3><div><span class="status book">להזמין סוסים מראש</span><span class="status buy">מומלץ לקנות רכבל אונליין</span></div>\n<div class="dolo-grid"><div class="dolo-line"><strong>בוקר – סוסים:</strong> Maneggio Unterlanzin · Telfen Lanzin 61A, Castelrotto/Kastelruth<div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Telfen%20Lanzin%2061A%2C%2039040%20Castelrotto%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Telfen%20Lanzin%2061A%2C%2039040%20Castelrotto%2C%20Italy&navigate=yes">Waze</button></div></div><div class="dolo-line"><strong>הזמנת סוסים:</strong> יש להזמין טלפונית מראש. מוצעות רכיבות של שעה, שעתיים, שלוש שעות ויום מלא. למשפחה שלכם: שעה–שעתיים.</div><div class="dolo-line"><strong>אחר כך:</strong> נוסעים לתחנת Seiser Alm Aerial Cableway · Schlernstraße 39, Seis am Schlern.<div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Schlernstrasse%2039%2C%2039040%20Seis%20am%20Schlern%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Schlernstrasse%2039%2C%2039040%20Seis%20am%20Schlern%2C%20Italy&navigate=yes">Waze</button></div></div><div class="dolo-line"><strong>חניה:</strong> החניון החיצוני הגדול בתחנת העמק ב-Seis הוא חינם; חניונים תת-קרקעיים בתשלום. אין צורך בהזמנת P1/P2 כי אתם לא עולים עם הרכב ל-Compatsch.<div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Compatsch%2C%20Alpe%20di%20Siusi%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Compatsch%2C%20Alpe%20di%20Siusi%2C%20Italy&navigate=yes">Waze</button></div></div><div class="dolo-line"><strong>רכבל:</strong> Seis → Compatsch, כ-15 דקות. ב-16/9 פועל 08:00–18:00.<div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Compatsch%2C%20Alpe%20di%20Siusi%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Compatsch%2C%20Alpe%20di%20Siusi%2C%20Italy&navigate=yes">Waze</button></div></div><div class="dolo-line"><strong>מסלול מומלץ:</strong> Compatsch → תחילת Hans & Paula Steger Trail (שביל 30) → אזור Ritsch-Schwaige → חזרה ל-Compatsch.<div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Compatsch%2C%20Alpe%20di%20Siusi%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Compatsch%2C%20Alpe%20di%20Siusi%2C%20Italy&navigate=yes">Waze</button></div><div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Ritsch%20Schwaige%2C%20Alpe%20di%20Siusi%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Ritsch%20Schwaige%2C%20Alpe%20di%20Siusi%2C%20Italy&navigate=yes">Waze</button></div></div><div class="dolo-line"><strong>זמן:</strong> 2–3 שעות הליכה רגועה + שעה לאוכל. ביחד עם הרכבל: כ-4 שעות באזור Alpe di Siusi.</div><div class="dolo-line"><strong>חלופה:</strong> אם נשאר כוח: Bullaccia/Puflatsch לתצפית קצרה. לא הייתי עושה מעגל 8 ק״מ מלא אחרי רכיבה על סוסים.<div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Bullaccia%2C%20Alpe%20di%20Siusi%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Bullaccia%2C%20Alpe%20di%20Siusi%2C%20Italy&navigate=yes">Waze</button></div><div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Puflatsch%2C%20Alpe%20di%20Siusi%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Puflatsch%2C%20Alpe%20di%20Siusi%2C%20Italy&navigate=yes">Waze</button></div></div></div>\n<h4>סדר ביצוע</h4><ol class="dolo-steps"><li>רכיבה בבוקר, רצוי להתחיל מוקדם.</li><li>אחרי הרכיבה לנסוע ישירות ל-Seis ולחנות בתחנת הרכבל.</li><li>לעלות ל-Compatsch.</li><li>ללכת על שביל 30 לכיוון Ritsch ולחזור לפני שמתעייפים.</li><li>לרדת ברכבל לפני 18:00.</li></ol>\n<h4>ניווט מדויק</h4><div class="navrow"><div class="navlabel">Maneggio Unterlanzin</div><div class="navactions"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Telfen%20Lanzin%2061A%2C%2039040%20Castelrotto%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Telfen%20Lanzin%2061A%2C%2039040%20Castelrotto%2C%20Italy&navigate=yes">Waze</button></div></div><div class="navrow"><div class="navlabel">Seiser Alm Cableway</div><div class="navactions"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Schlernstrasse%2039%2C%2039040%20Seis%20am%20Schlern%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Schlernstrasse%2039%2C%2039040%20Seis%20am%20Schlern%2C%20Italy&navigate=yes">Waze</button></div></div>\n<a class="official-link" href="https://www.unterlanzin.it/it/programma.asp" target="_blank" rel="noopener">רכיבת סוסים – Unterlanzin</a> <a class="official-link" href="https://www.seiseralm.it/en/info-service/mobility/seiser-alm-aerial-cableway-summer.html" target="_blank" rel="noopener">רכבל Seis–Compatsch</a> <a class="official-link" href="https://www.seiseralm.it/en/info-service/current-information/information-a-z/1FD50CBCFA16C0C65CC6F7A178B6416D-hans-and-paula-steger-trail.html" target="_blank" rel="noopener">Hans &amp; Paula Steger Trail</a> \n</div><div class="doloplan" data-doloday="5">\n<h3>יום ה׳ 17/9 · Terme Merano</h3><div><span class="status buy">מומלץ להזמין כניסה מראש</span><span class="status none">חניה במקום</span></div>\n<div class="dolo-grid"><div class="dolo-line"><strong>יעד:</strong> Terme Merano · Piazza Terme 9, Merano<div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Piazza%20Terme%209%2C%2039012%20Merano%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Piazza%20Terme%209%2C%2039012%20Merano%2C%20Italy&navigate=yes">Waze</button></div></div><div class="dolo-line"><strong>חניה:</strong> Parking Terme Merano – חניון תת־קרקעי 560 מקומות עם גישה ישירה. מבקרי המרחצאות מקבלים שעה חניה חינם לאחר אימות הכרטיס.<div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Piazza%20Terme%209%2C%2039012%20Merano%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Piazza%20Terme%209%2C%2039012%20Merano%2C%20Italy&navigate=yes">Waze</button></div><div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Parking%20Terme%20Merano%2C%20Merano%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Parking%20Terme%20Merano%2C%20Merano%2C%20Italy&navigate=yes">Waze</button></div></div><div class="dolo-line"><strong>שעות:</strong> הבריכות המקורות 09:00–21:00, כניסה אחרונה 19:00.</div><div class="dolo-line"><strong>חשוב לתאריך שלכם:</strong> 17/9 כבר נחשב עונת חורף בכרטיסים; הבריכות החיצוניות פועלות רק עד אמצע ספטמבר. תבנו על המתחם המקורה.</div><div class="dolo-line"><strong>כמה זמן:</strong> 3–5 שעות מספיקות למשפחה. אפשר לשלב לפני/אחרי הליכה קצרה במרכז מרנו.</div><div class="dolo-line"><strong>כרטיסים:</strong> אפשר לקנות אונליין. אם רוצים Sauna: היא מגיל 14, ללא בגדי ים, ובני 14–17 רק עם מבוגר.</div></div>\n<h4>סדר ביצוע</h4><ol class="dolo-steps"><li>לצאת בבוקר מ-Laion.</li><li>לחנות ישירות ב-Parking Terme Merano.</li><li>להקדיש 3–5 שעות לבריכות.</li><li>לאחר מכן קפה/מרכז Merano וחזרה למלון.</li></ol>\n<h4>ניווט מדויק</h4><div class="navrow"><div class="navlabel">Terme Merano</div><div class="navactions"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Piazza%20Terme%209%2C%2039012%20Merano%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Piazza%20Terme%209%2C%2039012%20Merano%2C%20Italy&navigate=yes">Waze</button></div></div>\n<a class="official-link" href="https://www.termemerano.it/en/prices-and-information/opening-hours/" target="_blank" rel="noopener">שעות פתיחה רשמיות</a> <a class="official-link" href="https://www.termemerano.it/en/prices-and-information/prices/" target="_blank" rel="noopener">כרטיסים ומחירים</a> <a class="official-link" href="https://www.termemerano.it/en/prices-and-information/parking/" target="_blank" rel="noopener">חניה רשמית</a> \n</div><div class="doloplan" data-doloday="6">\n<h3>יום ו׳ 18/9 · Avisio Rafting – Val di Fiemme</h3><div><span class="status book">חובה להזמין מראש</span><span class="status none">ציוד טכני כלול</span></div>\n<div class="dolo-grid"><div class="dolo-line"><strong>נקודת מפגש:</strong> Avisio Rafting · ליד האגם ב-Lago di Tesero · Via Lago, 38038 Tesero<div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Via%20Lago%2C%2038038%20Tesero%20TN%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Via%20Lago%2C%2038038%20Tesero%20TN%2C%20Italy&navigate=yes">Waze</button></div><div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Lago%20di%20Tesero%2C%2038038%20Tesero%20TN%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Lago%20di%20Tesero%2C%2038038%20Tesero%20TN%2C%20Italy&navigate=yes">Waze</button></div></div><div class="dolo-line"><strong>חניה:</strong> במתחם/ליד בסיס הראפטינג. מגיעים לאותה נקודת מפגש ומקבלים הסעה חזרה בסוף הפעילות.</div><div class="dolo-line"><strong>עונה:</strong> פתוח בקיץ 2026 עד סוף ספטמבר.</div><div class="dolo-line"><strong>משך:</strong> כ-3 שעות לכל החוויה הקלאסית: התארגנות, ציוד, תדריך ושיט.</div><div class="dolo-line"><strong>הזמנה:</strong> האתר מבקש להזמין לפחות 1–2 ימים מראש; בספטמבר עדיף לסגור הרבה קודם בגלל שאתם 5.</div><div class="dolo-line"><strong>מה מקבלים:</strong> חליפת ניאופרן 4 מ״מ, נעלי ניאופרן, אפוד, קסדה ומשוט; גם מקלחות חמות וחדרי הלבשה.</div><div class="dolo-line"><strong>מה להביא:</strong> בגד ים, מגבת ובגדים/תחתונים להחלפה. לא לקחת טלפון/ארנק לשיט.</div><div class="dolo-line"><strong>גיל:</strong> האתר של Avisio מציין מגיל 7 ובתנאי שיודעים לשחות; המשפחה שלכם מתאימה מבחינת גיל.</div></div>\n<h4>סדר ביצוע</h4><ol class="dolo-steps"><li>להגיע לפחות 20–30 דק׳ לפני השעה שקיבלתם.</li><li>החלפה לחליפות + תדריך בטיחות.</li><li>שיט עם מדריך.</li><li>מקלחת חמה והחלפה.</li><li>ארוחה קלה ב-Lago di Tesero או בדרך חזרה.</li></ol>\n<h4>ניווט מדויק</h4><div class="navrow"><div class="navlabel">Avisio Rafting</div><div class="navactions"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Via%20Lago%2C%2038038%20Tesero%20TN%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Via%20Lago%2C%2038038%20Tesero%20TN%2C%20Italy&navigate=yes">Waze</button></div></div>\n<a class="official-link" href="https://www.avisiorafting.it/en/" target="_blank" rel="noopener">Avisio Rafting – אתר רשמי</a> <a class="official-link" href="https://www.avisiorafting.it/prenota/index.asp?lang=eng" target="_blank" rel="noopener">הזמנה אונליין</a> <a class="official-link" href="https://www.avisiorafting.it/where-we-are/en/" target="_blank" rel="noopener">נקודת מפגש</a> \n</div><div class="doloplan" data-doloday="7">\n<h3>שבת 19/9 · Laion → Riva del Garda</h3><div><span class="status none">אין הזמנה מיוחדת</span></div>\n<div class="dolo-grid"><div class="dolo-line"><strong>תוכנית:</strong> צ׳ק־אאוט → ירידה מהדולומיטים → Riva del Garda → Arya Lake Apartment.<div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Via%20Nino%20Pernici%2014%2C%20Riva%20del%20Garda%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Via%20Nino%20Pernici%2014%2C%20Riva%20del%20Garda%2C%20Italy&navigate=yes">Waze</button></div></div><div class="dolo-line"><strong>יעד לינה:</strong> Arya Lake Apartment · Via Nino Pernici 14, Riva del Garda<div class="navactions" style="margin-top:8px"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Via%20Nino%20Pernici%2014%2C%20Riva%20del%20Garda%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Via%20Nino%20Pernici%2014%2C%20Riva%20del%20Garda%2C%20Italy&navigate=yes">Waze</button></div></div><div class="dolo-line"><strong>חניה/פריקה:</strong> להגיע לדירה, לפרוק לפי הוראות המארח; אחר כך להשתמש בחניה המתאימה לפי זמינות/הוראות הדירה.</div><div class="dolo-line"><strong>קצב היום:</strong> זה יום מעבר. לא להכניס רכבל נוסף; תשאירו מרווח לצ׳ק־אין, קניות וסיבוב ראשון בריבה.</div><div class="dolo-line"><strong>בערב:</strong> נמל + מרכז עתיק + ארוחת ערב.</div></div>\n<h4>סדר ביצוע</h4><ol class="dolo-steps"><li>ארוחת בוקר וצ׳ק־אאוט.</li><li>נסיעה רגועה לריבה.</li><li>צ׳ק־אין והתארגנות.</li><li>קניות לדירה.</li><li>טיילת ונמל בערב.</li></ol>\n<h4>ניווט מדויק</h4><div class="navrow"><div class="navlabel">Arya Lake Apartment</div><div class="navactions"><button class="navbtn2 gmaps" data-url="https://www.google.com/maps/dir/?api=1&destination=Via%20Nino%20Pernici%2014%2C%20Riva%20del%20Garda%2C%20Italy">Google Maps</button><button class="navbtn2 waze" data-url="https://www.waze.com/ul?q=Via%20Nino%20Pernici%2014%2C%20Riva%20del%20Garda%2C%20Italy&navigate=yes">Waze</button></div></div>\n\n</div>';
+
+  // Add concise operational card inside each original day as well
+  document.querySelectorAll('.day-card').forEach(card=>{
+    const d=Number(card.dataset.day);
+    if(d<2 || d>7) return;
+    const source=document.querySelector('#dolomitesContainer [data-doloday="'+d+'"]');
+    if(!source) return;
+    const clone=source.cloneNode(true);
+    const route=card.querySelector('.dayroutebox');
+    if(route) route.insertAdjacentElement('afterend', clone);
+  });
+
+  document.querySelectorAll('#dolomites .navbtn2, .day-card .doloplan .navbtn2').forEach(btn=>{
+    btn.addEventListener('click',()=>openNav(btn.dataset.url));
+  });
+})();
+</script>
+
+
+<script>
+(function(){
+  function bindDoloNav(){
+    document.querySelectorAll('#dolomites .navbtn2, .day-card .doloplan .navbtn2').forEach(btn=>{
+      if(btn.dataset.doloBound==='1') return;
+      btn.dataset.doloBound='1';
+      btn.addEventListener('click',()=>openNav(btn.dataset.url));
+    });
+  }
+  bindDoloNav();
+})();
+</script>
+
+
+<script>
+(function(){
+  const holder=document.getElementById('dolomitesContainer');
+  if(holder) holder.innerHTML="<div class=\"doloplan\" data-doloday=\"2\"><h3>יום ב׳ 14/9 · Desenzano → Molveno → Laion / Ortisei</h3><div><span class=\"status none\">אין הזמנה מיוחדת</span></div><div class=\"dolo-grid\"><div class=\"dolo-line\"><strong>מסלול:</strong> Desenzano → Lago di Molveno → Laion / Ortisei</div><div class=\"dolo-line\"><strong>עצירה מרכזית:</strong> Lago di Molveno – 2–3 שעות לטיילת/אגם + ארוחת צהריים</div><div class=\"dolo-line\"><strong>חניה:</strong> Parcheggio Lago di Molveno</div><div class=\"dolo-line\"><strong>סיום:</strong> התמקמות ב-Hatzeshof Heustadel וקניות לערב</div></div><h4>ניווט מדויק</h4><div class=\"navrow\"><div class=\"navlabel\">Lago di Molveno</div><div class=\"navactions\"><button class=\"navbtn2 gmaps\" data-url=\"https://www.google.com/maps/dir/?api=1&destination=Lago%20di%20Molveno%2C%20Molveno%20TN%2C%20Italy\">Google Maps</button><button class=\"navbtn2 waze\" data-url=\"https://www.waze.com/ul?q=Lago%20di%20Molveno%2C%20Molveno%20TN%2C%20Italy&navigate=yes\">Waze</button></div></div><div class=\"navrow\"><div class=\"navlabel\">חניה Molveno</div><div class=\"navactions\"><button class=\"navbtn2 gmaps\" data-url=\"https://www.google.com/maps/dir/?api=1&destination=Parcheggio%20Lago%20di%20Molveno%2C%20Molveno%20TN%2C%20Italy\">Google Maps</button><button class=\"navbtn2 waze\" data-url=\"https://www.waze.com/ul?q=Parcheggio%20Lago%20di%20Molveno%2C%20Molveno%20TN%2C%20Italy&navigate=yes\">Waze</button></div></div><div class=\"navrow\"><div class=\"navlabel\">Hatzeshof Heustadel</div><div class=\"navactions\"><button class=\"navbtn2 gmaps\" data-url=\"https://www.google.com/maps/dir/?api=1&destination=Tschofas%203%2C%2039040%20Laion%2C%20Italy\">Google Maps</button><button class=\"navbtn2 waze\" data-url=\"https://www.waze.com/ul?q=Tschofas%203%2C%2039040%20Laion%2C%20Italy&navigate=yes\">Waze</button></div></div></div><div class=\"doloplan\" data-doloday=\"3\"><h3>יום ג׳ 15/9 · Seceda – יום מלא</h3><div><span class=\"status none\">מומלץ לקנות רכבל מראש</span></div><div class=\"dolo-grid\"><div class=\"dolo-line\"><strong>תחנה:</strong> Funivie Seceda, Ortisei</div><div class=\"dolo-line\"><strong>רכבלים:</strong> Ortisei → Furnes → Seceda</div><div class=\"dolo-line\"><strong>מסלול:</strong> Ridgeline → Pieralongia → בקתה → Fermeda → חזרה</div><div class=\"dolo-line\"><strong>משך:</strong> כ-4–5 שעות על ההר כולל עצירות וארוחה</div><div class=\"dolo-line\"><strong>הכנה:</strong> לבדוק ערב קודם מזג אוויר ופעילות רכבלים</div></div><h4>ניווט מדויק</h4><div class=\"navrow\"><div class=\"navlabel\">Funivie Seceda</div><div class=\"navactions\"><button class=\"navbtn2 gmaps\" data-url=\"https://www.google.com/maps/dir/?api=1&destination=Via%20Val%20d%27Anna%202%2C%2039046%20Ortisei%2C%20Italy\">Google Maps</button><button class=\"navbtn2 waze\" data-url=\"https://www.waze.com/ul?q=Via%20Val%20d%27Anna%202%2C%2039046%20Ortisei%2C%20Italy&navigate=yes\">Waze</button></div></div><div class=\"navrow\"><div class=\"navlabel\">Seceda Ridgeline</div><div class=\"navactions\"><button class=\"navbtn2 gmaps\" data-url=\"https://www.google.com/maps/dir/?api=1&destination=Seceda%20Ridgeline%2C%20Ortisei%2C%20Italy\">Google Maps</button><button class=\"navbtn2 waze\" data-url=\"https://www.waze.com/ul?q=Seceda%20Ridgeline%2C%20Ortisei%2C%20Italy&navigate=yes\">Waze</button></div></div><div class=\"navrow\"><div class=\"navlabel\">Pieralongia</div><div class=\"navactions\"><button class=\"navbtn2 gmaps\" data-url=\"https://www.google.com/maps/dir/?api=1&destination=Pieralongia%2C%20Seceda%2C%20Italy\">Google Maps</button><button class=\"navbtn2 waze\" data-url=\"https://www.waze.com/ul?q=Pieralongia%2C%20Seceda%2C%20Italy&navigate=yes\">Waze</button></div></div><div class=\"navrow\"><div class=\"navlabel\">Fermeda</div><div class=\"navactions\"><button class=\"navbtn2 gmaps\" data-url=\"https://www.google.com/maps/dir/?api=1&destination=Fermeda%20Chairlift%2C%20Seceda%2C%20Italy\">Google Maps</button><button class=\"navbtn2 waze\" data-url=\"https://www.waze.com/ul?q=Fermeda%20Chairlift%2C%20Seceda%2C%20Italy&navigate=yes\">Waze</button></div></div></div><div class=\"doloplan\" data-doloday=\"4\"><h3>יום ד׳ 16/9 · Alpe di Siusi – יום מלא</h3><div><span class=\"status none\">מומלץ לקנות רכבל מראש</span><span class=\"status none\">ללא סוסים</span></div><div class=\"dolo-grid\"><div class=\"dolo-line\"><strong>תחנה:</strong> Seiser Alm Cableway, Seis</div><div class=\"dolo-line\"><strong>חניה:</strong> בחניון תחנת הרכבל ב-Seis</div><div class=\"dolo-line\"><strong>רכבל:</strong> Seis → Compatsch</div><div class=\"dolo-line\"><strong>מסלול:</strong> Hans &amp; Paula Steger Trail → Ritsch → חזרה</div><div class=\"dolo-line\"><strong>משך:</strong> כ-3–4 שעות הליכה + ארוחת בקתה</div><div class=\"dolo-line\"><strong>אופציה:</strong> אפשר להאריך ל-Saltria / רכבל פנימי לפי כוח ומזג אוויר</div></div><h4>ניווט מדויק</h4><div class=\"navrow\"><div class=\"navlabel\">Seiser Alm Cableway</div><div class=\"navactions\"><button class=\"navbtn2 gmaps\" data-url=\"https://www.google.com/maps/dir/?api=1&destination=Schlernstrasse%2039%2C%2039040%20Seis%20am%20Schlern%2C%20Italy\">Google Maps</button><button class=\"navbtn2 waze\" data-url=\"https://www.waze.com/ul?q=Schlernstrasse%2039%2C%2039040%20Seis%20am%20Schlern%2C%20Italy&navigate=yes\">Waze</button></div></div><div class=\"navrow\"><div class=\"navlabel\">Compatsch</div><div class=\"navactions\"><button class=\"navbtn2 gmaps\" data-url=\"https://www.google.com/maps/dir/?api=1&destination=Compatsch%2C%20Alpe%20di%20Siusi%2C%20Italy\">Google Maps</button><button class=\"navbtn2 waze\" data-url=\"https://www.waze.com/ul?q=Compatsch%2C%20Alpe%20di%20Siusi%2C%20Italy&navigate=yes\">Waze</button></div></div><div class=\"navrow\"><div class=\"navlabel\">Ritsch</div><div class=\"navactions\"><button class=\"navbtn2 gmaps\" data-url=\"https://www.google.com/maps/dir/?api=1&destination=Ritsch%20Schwaige%2C%20Alpe%20di%20Siusi%2C%20Italy\">Google Maps</button><button class=\"navbtn2 waze\" data-url=\"https://www.waze.com/ul?q=Ritsch%20Schwaige%2C%20Alpe%20di%20Siusi%2C%20Italy&navigate=yes\">Waze</button></div></div><div class=\"navrow\"><div class=\"navlabel\">Saltria</div><div class=\"navactions\"><button class=\"navbtn2 gmaps\" data-url=\"https://www.google.com/maps/dir/?api=1&destination=Saltria%2C%20Alpe%20di%20Siusi%2C%20Italy\">Google Maps</button><button class=\"navbtn2 waze\" data-url=\"https://www.waze.com/ul?q=Saltria%2C%20Alpe%20di%20Siusi%2C%20Italy&navigate=yes\">Waze</button></div></div></div><div class=\"doloplan\" data-doloday=\"5\"><h3>יום ה׳ 17/9 · סוסים + Terme Merano</h3><div><span class=\"status none\">להזמין סוסים מראש</span><span class=\"status none\">מומלץ להזמין מרחצאות מראש</span></div><div class=\"dolo-grid\"><div class=\"dolo-line\"><strong>בוקר:</strong> 09:00–10:00 רכיבה – Maneggio Unterlanzin</div><div class=\"dolo-line\"><strong>אחר כך:</strong> נסיעה ל-Merano</div><div class=\"dolo-line\"><strong>צהריים–אחה״צ:</strong> Terme Merano</div><div class=\"dolo-line\"><strong>אופי היום:</strong> יום קל יותר אחרי יומיים רצופים בהרים</div></div><h4>ניווט מדויק</h4><div class=\"navrow\"><div class=\"navlabel\">Maneggio Unterlanzin</div><div class=\"navactions\"><button class=\"navbtn2 gmaps\" data-url=\"https://www.google.com/maps/dir/?api=1&destination=Telfen%20Lanzin%2061A%2C%2039040%20Castelrotto%2C%20Italy\">Google Maps</button><button class=\"navbtn2 waze\" data-url=\"https://www.waze.com/ul?q=Telfen%20Lanzin%2061A%2C%2039040%20Castelrotto%2C%20Italy&navigate=yes\">Waze</button></div></div><div class=\"navrow\"><div class=\"navlabel\">Terme Merano</div><div class=\"navactions\"><button class=\"navbtn2 gmaps\" data-url=\"https://www.google.com/maps/dir/?api=1&destination=Piazza%20Terme%209%2C%2039012%20Merano%2C%20Italy\">Google Maps</button><button class=\"navbtn2 waze\" data-url=\"https://www.waze.com/ul?q=Piazza%20Terme%209%2C%2039012%20Merano%2C%20Italy&navigate=yes\">Waze</button></div></div><div class=\"navrow\"><div class=\"navlabel\">Parking Terme Merano</div><div class=\"navactions\"><button class=\"navbtn2 gmaps\" data-url=\"https://www.google.com/maps/dir/?api=1&destination=Parking%20Terme%20Merano%2C%20Merano%2C%20Italy\">Google Maps</button><button class=\"navbtn2 waze\" data-url=\"https://www.waze.com/ul?q=Parking%20Terme%20Merano%2C%20Merano%2C%20Italy&navigate=yes\">Waze</button></div></div></div><div class=\"doloplan\" data-doloday=\"6\"><h3>יום ו׳ 18/9 · Avisio Rafting – Val di Fiemme</h3><div><span class=\"status none\">חובה להזמין מראש</span></div><div class=\"dolo-grid\"><div class=\"dolo-line\"><strong>נקודת מפגש:</strong> Lago di Tesero / Avisio Rafting</div><div class=\"dolo-line\"><strong>משך:</strong> כ-3 שעות כולל התארגנות</div><div class=\"dolo-line\"><strong>הגעה:</strong> 20–30 דקות לפני השעה שנקבעה</div><div class=\"dolo-line\"><strong>ציוד:</strong> ציוד טכני מסופק במקום; להביא בגד ים, מגבת ובגדים להחלפה</div></div><h4>ניווט מדויק</h4><div class=\"navrow\"><div class=\"navlabel\">Avisio Rafting / Lago di Tesero</div><div class=\"navactions\"><button class=\"navbtn2 gmaps\" data-url=\"https://www.google.com/maps/dir/?api=1&destination=Via%20Lago%2C%2038038%20Tesero%20TN%2C%20Italy\">Google Maps</button><button class=\"navbtn2 waze\" data-url=\"https://www.waze.com/ul?q=Via%20Lago%2C%2038038%20Tesero%20TN%2C%20Italy&navigate=yes\">Waze</button></div></div></div><div class=\"doloplan\" data-doloday=\"7\"><h3>שבת 19/9 · מעבר לריבה דרך Passo Sella, Carezza ו-Cavalese</h3><div><span class=\"status none\">אין הזמנה מיוחדת</span></div><div class=\"dolo-grid\"><div class=\"dolo-line\"><strong>יציאה:</strong> סביב 09:30 מאזור Ortisei / Laion</div><div class=\"dolo-line\"><strong>עצירה 1:</strong> Passo Sella – תצפית קצרה</div><div class=\"dolo-line\"><strong>עצירה 2:</strong> Lago di Carezza – הליכה קצרה</div><div class=\"dolo-line\"><strong>צהריים:</strong> Cavalese – ארוחת צהריים רגועה</div><div class=\"dolo-line\"><strong>סיום:</strong> המשך ל-Riva del Garda והגעה אחה״צ מוקדם</div></div><h4>ניווט מדויק</h4><div class=\"navrow\"><div class=\"navlabel\">Passo Sella</div><div class=\"navactions\"><button class=\"navbtn2 gmaps\" data-url=\"https://www.google.com/maps/dir/?api=1&destination=Passo%20Sella%2C%20Dolomites%2C%20Italy\">Google Maps</button><button class=\"navbtn2 waze\" data-url=\"https://www.waze.com/ul?q=Passo%20Sella%2C%20Dolomites%2C%20Italy&navigate=yes\">Waze</button></div></div><div class=\"navrow\"><div class=\"navlabel\">Lago di Carezza</div><div class=\"navactions\"><button class=\"navbtn2 gmaps\" data-url=\"https://www.google.com/maps/dir/?api=1&destination=Lago%20di%20Carezza%2C%20Nova%20Levante%2C%20Italy\">Google Maps</button><button class=\"navbtn2 waze\" data-url=\"https://www.waze.com/ul?q=Lago%20di%20Carezza%2C%20Nova%20Levante%2C%20Italy&navigate=yes\">Waze</button></div></div><div class=\"navrow\"><div class=\"navlabel\">Cavalese</div><div class=\"navactions\"><button class=\"navbtn2 gmaps\" data-url=\"https://www.google.com/maps/dir/?api=1&destination=Cavalese%2C%20Trentino%2C%20Italy\">Google Maps</button><button class=\"navbtn2 waze\" data-url=\"https://www.waze.com/ul?q=Cavalese%2C%20Trentino%2C%20Italy&navigate=yes\">Waze</button></div></div><div class=\"navrow\"><div class=\"navlabel\">Arya Lake Apartment</div><div class=\"navactions\"><button class=\"navbtn2 gmaps\" data-url=\"https://www.google.com/maps/dir/?api=1&destination=Via%20Nino%20Pernici%2014%2C%20Riva%20del%20Garda%2C%20Italy\">Google Maps</button><button class=\"navbtn2 waze\" data-url=\"https://www.waze.com/ul?q=Via%20Nino%20Pernici%2014%2C%20Riva%20del%20Garda%2C%20Italy&navigate=yes\">Waze</button></div></div></div>";
+  document.querySelectorAll('.day-card .doloplan').forEach(x=>x.remove());
+  document.querySelectorAll('.day-card').forEach(card=>{
+    const d=Number(card.dataset.day);
+    if(d<2||d>7) return;
+    const source=document.querySelector('#dolomitesContainer [data-doloday="'+d+'"]');
+    if(!source) return;
+    const clone=source.cloneNode(true);
+    const route=card.querySelector('.dayroutebox');
+    if(route) route.insertAdjacentElement('afterend',clone);
+  });
+  document.querySelectorAll('#dolomites .navbtn2, .day-card .doloplan .navbtn2').forEach(btn=>{
+    btn.onclick=()=>openNav(btn.dataset.url);
+  });
+})();
+</script>
+
+
+<script>
+(function(){
+  document.querySelectorAll('#luggageParkingRecommendations .navbtn2').forEach(btn=>{
+    btn.addEventListener('click',()=>openNav(btn.dataset.url));
+  });
+})();
+</script>
+
+
+<script>
+(function(){
+  const dayParking = {"2": [{"place": "Molveno", "name": "Park Molveno – Ischia", "note": "חניון מסודר באזור האגם. מתאים במיוחד לעצירה ביום המעבר.", "gm": "https://www.google.com/maps/dir/?api=1&destination=Parcheggio%20Ischia%2C%20Molveno%2C%20Trentino%2C%20Italy", "wz": "https://www.waze.com/ul?q=Parcheggio%20Ischia%2C%20Molveno%2C%20Trentino%2C%20Italy&navigate=yes"}], "7": [{"place": "Passo Sella", "name": "Parking Passo Sella", "note": "עצירה קצרה במעבר. להשאיר את תא המטען סגור.", "gm": "https://www.google.com/maps/dir/?api=1&destination=Parking%20Passo%20Sella%2C%20Selva%20di%20Val%20Gardena%2C%20Italy", "wz": "https://www.waze.com/ul?q=Parking%20Passo%20Sella%2C%20Selva%20di%20Val%20Gardena%2C%20Italy&navigate=yes"}, {"place": "Lago di Carezza", "name": "Parcheggio Lago di Carezza", "note": "חניון מסודר של האגם.", "gm": "https://www.google.com/maps/dir/?api=1&destination=Parcheggio%20Lago%20di%20Carezza%2C%20Nova%20Levante%2C%20Italy", "wz": "https://www.waze.com/ul?q=Parcheggio%20Lago%20di%20Carezza%2C%20Nova%20Levante%2C%20Italy&navigate=yes"}, {"place": "Cavalese", "name": "Parcheggio Piazza Fiera", "note": "מומלץ לעצירת קפה/צהריים ביום המעבר.", "gm": "https://www.google.com/maps/dir/?api=1&destination=Piazza%20Fiera%2C%20Cavalese%2C%20Italy", "wz": "https://www.waze.com/ul?q=Piazza%20Fiera%2C%20Cavalese%2C%20Italy&navigate=yes"}], "11": [{"place": "Malcesine", "name": "Parcheggio Funivia Malcesine", "note": "חניון מקורה/תת־קרקעי, ולכן עדיף ביום מעבר עם כל הציוד.", "gm": "https://www.google.com/maps/dir/?api=1&destination=Parcheggio%20Funivia%20Malcesine%2C%20Via%20Navene%20Vecchia%2C%20Malcesine%2C%20Italy", "wz": "https://www.waze.com/ul?q=Parcheggio%20Funivia%20Malcesine%2C%20Via%20Navene%20Vecchia%2C%20Malcesine%2C%20Italy&navigate=yes"}], "15": [{"place": "Maranello", "name": "Museo Ferrari / Via Fornace Parking", "note": "חניה מוסדרת ליד אזור המוזיאון.", "gm": "https://www.google.com/maps/dir/?api=1&destination=Via%20Fornace%2C%20Maranello%2C%20Italy", "wz": "https://www.waze.com/ul?q=Via%20Fornace%2C%20Maranello%2C%20Italy&navigate=yes"}, {"place": "Milano", "name": "Duomo Parking – Via Olmetto 9", "note": "חניון תת־קרקעי. אם ניתן, עדיף עדיין לפרוק מזוודות במלון לפני הכניסה למילאנו.", "gm": "https://www.google.com/maps/dir/?api=1&destination=Via%20Olmetto%209%2C%20Milano%2C%20Italy", "wz": "https://www.waze.com/ul?q=Via%20Olmetto%209%2C%20Milano%2C%20Italy&navigate=yes"}]};
+  document.querySelectorAll('.day-card').forEach(card=>{
+    const d = card.dataset.day;
+    const items = dayParking[d];
+    if(!items || !items.length) return;
+
+    const wrap = document.createElement('div');
+    wrap.className = 'dayluggagebox';
+    wrap.innerHTML = '<div class="title">🧳 חניה מומלצת ביום מעבר</div>';
+
+    items.forEach(p=>{
+      const item = document.createElement('div');
+      item.className = 'dayluggageitem';
+      item.innerHTML = `
+        <div class="placename">${p.place} · ${p.name}
+          <span class="newparkingbadge">חדש – מומלץ עם מזוודות</span>
+        </div>
+        <div class="desc">${p.note}</div>
+        <div class="navactions" style="margin-top:8px">
+          <button class="navbtn2 gmaps" data-url="${p.gm}">Google Maps</button>
+          <button class="navbtn2 waze" data-url="${p.wz}">Waze</button>
+        </div>
+      `;
+      wrap.appendChild(item);
+    });
+
+    // Put the block close to existing parking info if possible
+    const existingPark = card.querySelector('.parkbox');
+    if(existingPark) existingPark.insertAdjacentElement('afterend', wrap);
+    else card.appendChild(wrap);
+  });
+
+  document.querySelectorAll('.dayluggagebox .navbtn2').forEach(btn=>{
+    btn.addEventListener('click',()=>openNav(btn.dataset.url));
+  });
+})();
+</script>
+
+</body>
+</html>

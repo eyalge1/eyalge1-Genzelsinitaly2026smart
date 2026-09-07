@@ -157,6 +157,14 @@ textarea{width:100%;min-height:86px;border:1px solid var(--line);border-radius:1
 </style>
 
 
+<style>
+.today-picker{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:12px;box-shadow:var(--shadow)}
+.today-picker label{display:block;font-weight:800;font-size:13px;margin-bottom:7px}
+.today-picker select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--text);font:inherit;font-size:14px}
+.today-picker .smart-subtle{margin-top:6px}
+</style>
+
+
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="./icons/icon-512.png">
@@ -1333,18 +1341,33 @@ buildFilters();renderDays();renderFood();renderParkingHub();renderBudget();rende
     if(!holder || typeof days==='undefined' || !days.length) return;
 
     const now=new Date();
-    const day=smartDayNumber(now);
+    const autoDay=smartDayNumber(now);
+    const saved=localStorage.getItem('smartTodayOverride')||'auto';
+    const selectedDay=saved==='auto' ? autoDay : Number(saved);
+    const day=(selectedDay>=1 && selectedDay<=days.length) ? selectedDay : autoDay;
     const d=days.find(x=>x.day===day)||days[0];
     const info=smartDayInfo[day]||{};
     const source=document.querySelector(`.day-card[data-day="${day}"]`);
 
     let pre='';
-    if(now<SMART_START){
+    if(saved==='auto' && now<SMART_START){
       const left=Math.ceil((SMART_START-now)/86400000);
       pre=`<div class="smart-alert">הטיול מתחיל בעוד ${left} ימים. מוצג כרגע יום 1 כדוגמה. בזמן הטיול המסך יעבור אוטומטית ליום המתאים.</div>`;
+    } else if(saved!=='auto'){
+      pre=`<div class="smart-alert">מצב בחירה ידנית: מוצג יום ${day}. כדי לחזור לזיהוי אוטומטי בחרו "אוטומטי – היום".</div>`;
     }
 
+    const options = ['<option value="auto">אוטומטי – היום</option>']
+      .concat(days.map(x=>`<option value="${x.day}">יום ${x.day} · ${x.date} · ${x.title}</option>`))
+      .join('');
+
     holder.innerHTML=`
+      <div class="today-picker">
+        <label for="smartTodaySelect">בחר יום להצגה</label>
+        <select id="smartTodaySelect">${options}</select>
+        <div class="smart-subtle">ברירת המחדל היא זיהוי אוטומטי לפי תאריך. הבחירה נשמרת במכשיר עד שמחזירים ל"אוטומטי".</div>
+      </div>
+
       <div class="smart-top">
         <h2>יום ${d.day} · ${d.date} · ${d.title}</h2>
         <p>לינה: ${d.sleep}</p>
@@ -1399,6 +1422,15 @@ buildFilters();renderDays();renderFood();renderParkingHub();renderBudget();rende
       ${renderTomorrow(now,day)}
     `;
 
+    const picker=holder.querySelector('#smartTodaySelect');
+    if(picker){
+      picker.value=saved;
+      picker.addEventListener('change',()=>{
+        localStorage.setItem('smartTodayOverride',picker.value);
+        renderToday();
+      });
+    }
+
     holder.querySelectorAll('.navbtn2').forEach(btn=>{
       btn.addEventListener('click',()=>openNav(btn.dataset.url));
     });
@@ -1437,14 +1469,11 @@ buildFilters();renderDays();renderFood();renderParkingHub();renderBudget();rende
 
 
 <script>
-(function () {
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function () {
-      navigator.serviceWorker.register('./service-worker.js').catch(function () {});
-    });
-  }
-})();
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('./service-worker.js').catch(function () {});
+  });
+}
 </script>
-
 </body>
 </html>

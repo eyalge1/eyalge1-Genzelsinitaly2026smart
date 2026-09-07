@@ -1,3 +1,4 @@
 Genzelsinitaly2026smart
 SMART v4 on v18 base
-Build: 2026-09-07
+Dropdown restored
+Build v2: 2026-09-07

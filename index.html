@@ -157,11 +157,40 @@ textarea{width:100%;min-height:86px;border:1px solid var(--line);border-radius:1
 </style>
 
 
-<style>
-.today-picker{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:12px;box-shadow:var(--shadow)}
-.today-picker label{display:block;font-weight:800;font-size:13px;margin-bottom:7px}
-.today-picker select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--text);font:inherit;font-size:14px}
-.today-picker .smart-subtle{margin-top:6px}
+<style id="smart-day-picker-style">
+.smart-day-picker{
+  background:#fff;
+  border:1px solid #d1d5db;
+  border-radius:14px;
+  padding:12px;
+  margin:0 0 12px;
+  box-shadow:0 8px 24px rgba(15,23,42,.08);
+}
+.smart-day-picker label{
+  display:block;
+  font-weight:800;
+  font-size:14px;
+  margin-bottom:8px;
+  color:#18212f;
+}
+.smart-day-picker select{
+  display:block;
+  width:100%;
+  min-height:44px;
+  padding:10px 12px;
+  border:1px solid #cbd5e1;
+  border-radius:12px;
+  background:#fff;
+  color:#18212f;
+  font:inherit;
+  font-size:14px;
+}
+.smart-day-picker-note{
+  margin-top:7px;
+  font-size:12px;
+  line-height:1.45;
+  color:#64748b;
+}
 </style>
 
 
@@ -1342,30 +1371,34 @@ buildFilters();renderDays();renderFood();renderParkingHub();renderBudget();rende
 
     const now=new Date();
     const autoDay=smartDayNumber(now);
-    const saved=localStorage.getItem('smartTodayOverride')||'auto';
-    const selectedDay=saved==='auto' ? autoDay : Number(saved);
-    const day=(selectedDay>=1 && selectedDay<=days.length) ? selectedDay : autoDay;
+    const stored=localStorage.getItem('smartTodaySelectedDay') || 'auto';
+    const manualDay=stored==='auto' ? null : Number(stored);
+    const day=(manualDay && manualDay>=1 && manualDay<=days.length) ? manualDay : autoDay;
+
     const d=days.find(x=>x.day===day)||days[0];
     const info=smartDayInfo[day]||{};
     const source=document.querySelector(`.day-card[data-day="${day}"]`);
 
     let pre='';
-    if(saved==='auto' && now<SMART_START){
+    if(stored==='auto' && now<SMART_START){
       const left=Math.ceil((SMART_START-now)/86400000);
       pre=`<div class="smart-alert">הטיול מתחיל בעוד ${left} ימים. מוצג כרגע יום 1 כדוגמה. בזמן הטיול המסך יעבור אוטומטית ליום המתאים.</div>`;
-    } else if(saved!=='auto'){
-      pre=`<div class="smart-alert">מצב בחירה ידנית: מוצג יום ${day}. כדי לחזור לזיהוי אוטומטי בחרו "אוטומטי – היום".</div>`;
+    } else if(stored!=='auto'){
+      pre=`<div class="smart-alert">מוצג יום ${day} בבחירה ידנית. כדי לחזור לזיהוי לפי התאריך, בחרו "אוטומטי – היום".</div>`;
     }
 
-    const options = ['<option value="auto">אוטומטי – היום</option>']
-      .concat(days.map(x=>`<option value="${x.day}">יום ${x.day} · ${x.date} · ${x.title}</option>`))
-      .join('');
+    const dayOptions=[
+      `<option value="auto">אוטומטי – היום</option>`,
+      ...days.map(x=>`<option value="${x.day}">יום ${x.day} · ${x.date} · ${x.title}</option>`)
+    ].join('');
 
     holder.innerHTML=`
-      <div class="today-picker">
-        <label for="smartTodaySelect">בחר יום להצגה</label>
-        <select id="smartTodaySelect">${options}</select>
-        <div class="smart-subtle">ברירת המחדל היא זיהוי אוטומטי לפי תאריך. הבחירה נשמרת במכשיר עד שמחזירים ל"אוטומטי".</div>
+      <div class="smart-day-picker">
+        <label for="smartTodayDaySelect">בחירת יום להצגה</label>
+        <select id="smartTodayDaySelect" aria-label="בחירת יום להצגה">
+          ${dayOptions}
+        </select>
+        <div class="smart-day-picker-note">אפשר לבחור ידנית כל יום בטיול, או להשאיר על "אוטומטי – היום".</div>
       </div>
 
       <div class="smart-top">
@@ -1383,6 +1416,11 @@ buildFilters();renderDays();renderFood();renderParkingHub();renderBudget();rende
           <div class="smart-kpi"><strong>${d.load_label||'—'}</strong><span>עומס</span></div>
         </div>
         <div class="smart-alert">${info.note||''}</div>
+      </div>
+
+      <div class="smart-section">
+        <div class="smart-title">🕒 סדר היום</div>
+        ${source?.querySelector('.timeline')?.outerHTML || ''}
       </div>
 
       <div class="smart-drive">
@@ -1403,11 +1441,6 @@ buildFilters();renderDays();renderFood();renderParkingHub();renderBudget();rende
         ${renderFood(d,source)}
       </div>
 
-      <div class="smart-section">
-        <div class="smart-title">🕒 סדר היום</div>
-        ${source?.querySelector('.timeline')?.outerHTML || ''}
-      </div>
-
       <div class="smart-card">
         <div class="smart-title">לפני שיוצאים</div>
         <div class="smart-check">
@@ -1422,11 +1455,11 @@ buildFilters();renderDays();renderFood();renderParkingHub();renderBudget();rende
       ${renderTomorrow(now,day)}
     `;
 
-    const picker=holder.querySelector('#smartTodaySelect');
+    const picker=holder.querySelector('#smartTodayDaySelect');
     if(picker){
-      picker.value=saved;
+      picker.value=(manualDay && manualDay>=1 && manualDay<=days.length) ? String(manualDay) : 'auto';
       picker.addEventListener('change',()=>{
-        localStorage.setItem('smartTodayOverride',picker.value);
+        localStorage.setItem('smartTodaySelectedDay', picker.value);
         renderToday();
       });
     }

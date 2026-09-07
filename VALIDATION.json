@@ -1,15 +1,16 @@
 {
   "checks": {
-    "Today tab": true,
-    "Today section": true,
-    "Dropdown": true,
-    "Auto option": true,
-    "Manual persistence": true,
-    "Today renderer": true,
-    "Tomorrow 16:00": true,
-    "Service worker": true
+    "today_tab": true,
+    "today_section": true,
+    "dropdown_visible": true,
+    "dropdown_label": true,
+    "auto_option": true,
+    "manual_persistence": true,
+    "timeline_present": true,
+    "timeline_before_drive": true,
+    "all_16_dates": true,
+    "tomorrow_1600": true,
+    "javascript_syntax": true
   },
-  "all_16_dates": true,
-  "javascript_syntax": "passed",
-  "index_size": 153837
+  "js_message": ""
 }

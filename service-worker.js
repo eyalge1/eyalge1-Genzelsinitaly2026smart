@@ -1,4 +1,4 @@
-const CACHE_NAME = 'Genzelsinitaly2026smart-smart-v4-v18-dropdown-v2-20260907';
+const CACHE_NAME = 'Genzelsinitaly2026smart-v3-20260907';
 const CORE = ['./','./index.html','./manifest.webmanifest','./icons/icon-192.png','./icons/icon-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE_NAME).then(c => c.addAll(CORE)));
@@ -9,12 +9,12 @@ self.addEventListener('activate', e => {
   self.clients.claim();
 });
 self.addEventListener('fetch', e => {
-  if (e.request.method !== 'GET') return;
-  const u = new URL(e.request.url);
-  if (u.origin !== self.location.origin) return;
-  e.respondWith(fetch(e.request).then(r => {
+  if(e.request.method !== 'GET') return;
+  const u=new URL(e.request.url);
+  if(u.origin !== self.location.origin) return;
+  e.respondWith(fetch(e.request).then(r=>{
     const copy=r.clone();
-    caches.open(CACHE_NAME).then(c => c.put(e.request,copy));
+    caches.open(CACHE_NAME).then(c=>c.put(e.request,copy));
     return r;
-  }).catch(() => caches.match(e.request).then(r => r || caches.match('./index.html'))));
+  }).catch(()=>caches.match(e.request).then(r=>r||caches.match('./index.html'))));
 });
